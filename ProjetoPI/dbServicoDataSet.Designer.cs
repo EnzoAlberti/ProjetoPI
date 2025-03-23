@@ -644,10 +644,10 @@ namespace ProjetoPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClienteRow AddClienteRow(int cod_cli, string nome, System.DateTime data_nasc, string telefone, string cidade, string uf, string bairro, string cep, string status_cli, int cod_usu, string cpf, string rua) {
+            public ClienteRow AddClienteRow(string nome, System.DateTime data_nasc, string telefone, string cidade, string uf, string bairro, string cep, string status_cli, int cod_usu, string cpf, string rua) {
                 ClienteRow rowClienteRow = ((ClienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cod_cli,
+                        null,
                         nome,
                         data_nasc,
                         telefone,
@@ -731,6 +731,8 @@ namespace ProjetoPI {
                 base.Columns.Add(this.columnrua);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_cli}, true));
+                this.columncod_cli.AutoIncrement = true;
+                this.columncod_cli.AutoIncrementSeed = 1;
                 this.columncod_cli.AllowDBNull = false;
                 this.columncod_cli.Unique = true;
                 this.columnnome.MaxLength = 100;
@@ -1055,10 +1057,10 @@ namespace ProjetoPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FornecedorRow AddFornecedorRow(int cod_for, string nome_fant, string cnpj, string email, string telefone, string rua, string bairro, string cidade, string uf, string cep, int cod_usu) {
+            public FornecedorRow AddFornecedorRow(string nome_fant, string cnpj, string email, string telefone, string rua, string bairro, string cidade, string uf, string cep, int cod_usu) {
                 FornecedorRow rowFornecedorRow = ((FornecedorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cod_for,
+                        null,
                         nome_fant,
                         cnpj,
                         email,
@@ -1138,6 +1140,8 @@ namespace ProjetoPI {
                 base.Columns.Add(this.columncod_usu);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_for}, true));
+                this.columncod_for.AutoIncrement = true;
+                this.columncod_for.AutoIncrementSeed = 1;
                 this.columncod_for.AllowDBNull = false;
                 this.columncod_for.Unique = true;
                 this.columnnome_fant.MaxLength = 100;
@@ -1422,10 +1426,10 @@ namespace ProjetoPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PagamentoRow AddPagamentoRow(int cod_pag, int cod_ped, int cod_usu, string tipo_pagamento, System.DateTime data, string parcela, decimal valor) {
+            public PagamentoRow AddPagamentoRow(int cod_ped, int cod_usu, string tipo_pagamento, System.DateTime data, string parcela, decimal valor) {
                 PagamentoRow rowPagamentoRow = ((PagamentoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cod_pag,
+                        null,
                         cod_ped,
                         cod_usu,
                         tipo_pagamento,
@@ -1489,6 +1493,8 @@ namespace ProjetoPI {
                 base.Columns.Add(this.columnvalor);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_pag}, true));
+                this.columncod_pag.AutoIncrement = true;
+                this.columncod_pag.AutoIncrementSeed = 1;
                 this.columncod_pag.AllowDBNull = false;
                 this.columncod_pag.Unique = true;
                 this.columntipo_pagamento.MaxLength = 100;
@@ -1746,10 +1752,10 @@ namespace ProjetoPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Pedido_notaRow AddPedido_notaRow(int cod_ped, int cod_usu, int cod_cli, System.DateTime data, decimal valor) {
+            public Pedido_notaRow AddPedido_notaRow(int cod_usu, int cod_cli, System.DateTime data, decimal valor) {
                 Pedido_notaRow rowPedido_notaRow = ((Pedido_notaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cod_ped,
+                        null,
                         cod_usu,
                         cod_cli,
                         data,
@@ -1805,6 +1811,8 @@ namespace ProjetoPI {
                 base.Columns.Add(this.columnvalor);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_ped}, true));
+                this.columncod_ped.AutoIncrement = true;
+                this.columncod_ped.AutoIncrementSeed = 1;
                 this.columncod_ped.AllowDBNull = false;
                 this.columncod_ped.Unique = true;
             }
@@ -2080,10 +2088,10 @@ namespace ProjetoPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ProdutoRow AddProdutoRow(int cod_pro, string nome, string tamanho, string cor, decimal preco, string marca, int cod_usu) {
+            public ProdutoRow AddProdutoRow(string nome, string tamanho, string cor, decimal preco, string marca, int cod_usu) {
                 ProdutoRow rowProdutoRow = ((ProdutoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cod_pro,
+                        null,
                         nome,
                         tamanho,
                         cor,
@@ -2147,6 +2155,8 @@ namespace ProjetoPI {
                 base.Columns.Add(this.columncod_usu);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_pro}, true));
+                this.columncod_pro.AutoIncrement = true;
+                this.columncod_pro.AutoIncrementSeed = 1;
                 this.columncod_pro.AllowDBNull = false;
                 this.columncod_pro.Unique = true;
                 this.columnnome.MaxLength = 100;
@@ -2466,10 +2476,10 @@ namespace ProjetoPI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UsuarioRow AddUsuarioRow(int cod_usu, string telefone, string email, string nome, System.DateTime data_cad, string uf, string cidade, string bairro, string rua, string cep, string senha) {
+            public UsuarioRow AddUsuarioRow(string telefone, string email, string nome, System.DateTime data_cad, string uf, string cidade, string bairro, string rua, string cep, string senha) {
                 UsuarioRow rowUsuarioRow = ((UsuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cod_usu,
+                        null,
                         telefone,
                         email,
                         nome,
@@ -2549,6 +2559,8 @@ namespace ProjetoPI {
                 base.Columns.Add(this.columnsenha);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncod_usu}, true));
+                this.columncod_usu.AutoIncrement = true;
+                this.columncod_usu.AutoIncrementSeed = 1;
                 this.columncod_usu.AllowDBNull = false;
                 this.columncod_usu.Unique = true;
                 this.columntelefone.MaxLength = 11;

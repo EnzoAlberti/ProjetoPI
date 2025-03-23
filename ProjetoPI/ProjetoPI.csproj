@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,27 +49,127 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conection.cs" />
     <Compile Include="dbServicoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="frms\Cad\frmCadUsu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="frms\Cad\frmCadUsu.Designer.cs">
+      <DependentUpon>frmCadUsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqCli.Designer.cs">
+      <DependentUpon>frmPesqCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqExt.Designer.cs">
+      <DependentUpon>frmPesqExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqFor.Designer.cs">
+      <DependentUpon>frmPesqFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqPro.Designer.cs">
+      <DependentUpon>frmPesqPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqUsu.Designer.cs">
+      <DependentUpon>frmPesqUsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Relat\frmRalatCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Relat\frmRalatCli.Designer.cs">
+      <DependentUpon>frmRalatCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatExt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatExt.Designer.cs">
+      <DependentUpon>frmRelatExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatFor.Designer.cs">
+      <DependentUpon>frmRelatFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatPro.Designer.cs">
+      <DependentUpon>frmRelatPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatUsu.Designer.cs">
+      <DependentUpon>frmRelatUsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Cad\frmCadCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Cad\frmCadCli.Designer.cs">
+      <DependentUpon>frmCadCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Cad\frmCadFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Cad\frmCadFor.Designer.cs">
+      <DependentUpon>frmCadFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Cad\frmCadPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Cad\frmCadPro.Designer.cs">
+      <DependentUpon>frmCadPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSplash.cs">
+    <Compile Include="frms\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSplash.Designer.cs">
+    <Compile Include="frms\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\frmTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\frmTelaPrincipal.Designer.cs">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmSplash.resx">
+    <EmbeddedResource Include="frms\Cad\frmCadUsu.resx">
+      <DependentUpon>frmCadUsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\frmTelaPrincipal.resx">
+      <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +191,7 @@
     <None Include="dbServicoDataSet.xss">
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
