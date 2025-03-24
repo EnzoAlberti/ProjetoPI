@@ -16,5 +16,13 @@ namespace ProjetoPI
         {
             InitializeComponent();
         }
+
+        private void frmRelatPro_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'dbServicoDataSet.Produto'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtoTableAdapter.Fill(this.dbServicoDataSet.Produto);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
