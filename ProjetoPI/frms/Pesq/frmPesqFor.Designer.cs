@@ -239,7 +239,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.fornecedorDataGridView);
             this.Name = "frmPesqFor";
-            this.Text = "frmPesqFor";
+            this.Text = "Pesquisa de Fornecedor";
             this.Load += new System.EventHandler(this.frmPesqFor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();

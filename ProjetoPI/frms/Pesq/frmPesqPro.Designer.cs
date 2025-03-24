@@ -82,7 +82,8 @@
             this.cbmFiltrar.FormattingEnabled = true;
             this.cbmFiltrar.Items.AddRange(new object[] {
             "Código",
-            "Nome"});
+            "Marca",
+            "Cor"});
             this.cbmFiltrar.Location = new System.Drawing.Point(66, 17);
             this.cbmFiltrar.Name = "cbmFiltrar";
             this.cbmFiltrar.Size = new System.Drawing.Size(80, 21);
@@ -207,7 +208,7 @@
             this.Controls.Add(this.produtoDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPesqPro";
-            this.Text = "frmPesqPro";
+            this.Text = "Pesquisa de Produto";
             this.Load += new System.EventHandler(this.frmPesqPro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

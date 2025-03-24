@@ -239,7 +239,7 @@
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPesqUsu";
-            this.Text = "frmPesqUsu";
+            this.Text = "Pesquisa de Usuário";
             this.Load += new System.EventHandler(this.frmPesqUsu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

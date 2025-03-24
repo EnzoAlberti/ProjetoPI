@@ -181,6 +181,12 @@
     <EmbeddedResource Include="frms\Cad\frmCadCli.resx">
       <DependentUpon>frmCadCli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frms\Cad\frmCadFor.resx">
+      <DependentUpon>frmCadFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\Cad\frmCadPro.resx">
+      <DependentUpon>frmCadPro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frms\Cad\frmCadUsu.resx">
       <DependentUpon>frmCadUsu.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +202,9 @@
     <EmbeddedResource Include="frms\Pesq\frmPesqCli.resx">
       <DependentUpon>frmPesqCli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frms\Pesq\frmPesqExt.resx">
+      <DependentUpon>frmPesqExt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frms\Pesq\frmPesqFor.resx">
       <DependentUpon>frmPesqFor.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frms\Relat\frmRelatCli.resx">
       <DependentUpon>frmRelatCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\Relat\frmRelatExt.resx">
+      <DependentUpon>frmRelatExt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frms\Relat\frmRelatFor.resx">
       <DependentUpon>frmRelatFor.cs</DependentUpon>
@@ -230,6 +242,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="dbServicoDataSet.xsc">
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
@@ -257,6 +270,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\tweakui.png" />
+    <None Include="Resources\Users.png" />
+    <None Include="Resources\utils_222.png" />
+    <None Include="Resources\utils22.png" />
+    <None Include="Resources\shutdown.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

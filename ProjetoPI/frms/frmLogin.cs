@@ -67,6 +67,7 @@ namespace ProjetoPI
                     if (reader.Read())
                     {
                         usuarioConectado = emailComboBox.Text;
+                        SessaoUsuario.CodUsuLog = (int)reader["cod_usu"];
                         frmTelaPrincipal p = new frmTelaPrincipal();
                         this.Hide();
                         p.Show();
@@ -93,10 +94,13 @@ namespace ProjetoPI
                 conn.Close();
             }
         }
-
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+        public static class SessaoUsuario
+        {
+            public static int CodUsuLog { get; set; }
         }
     }
 }

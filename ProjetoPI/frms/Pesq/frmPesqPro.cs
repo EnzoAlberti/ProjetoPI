@@ -49,9 +49,18 @@ namespace ProjetoPI
                     da.Fill(produto);
                     produtoDataGridView.DataSource = produto;
                 }
-                if (cbmFiltrar.Text == "Nome")
+                if (cbmFiltrar.Text == "Marca")
                 {
-                    string sql = "select * from Cliente where nome like '%" + txtPesquisar.Text + "%'";
+                    string sql = "select * from Cliente where marca like '%" + txtPesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cn.Connection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable produto = new DataTable();
+                    da.Fill(produto);
+                    produtoDataGridView.DataSource = produto;
+                }
+                if(cbmFiltrar.Text == "Cor")
+                {
+                    string sql = "select * from Cliente where cor like '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();

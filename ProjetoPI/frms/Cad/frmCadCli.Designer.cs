@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCli));
             System.Windows.Forms.Label cod_cliLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label data_nascLabel;
@@ -42,22 +41,23 @@
             System.Windows.Forms.Label cod_usuLabel;
             System.Windows.Forms.Label cpfLabel;
             System.Windows.Forms.Label ruaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCli));
             this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ClienteTableAdapter();
             this.tableAdapterManager = new ProjetoPI.dbServicoDataSetTableAdapters.TableAdapterManager();
             this.clienteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.clienteBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cod_cliTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
@@ -88,6 +88,115 @@
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingNavigator)).BeginInit();
             this.clienteBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cod_cliLabel
+            // 
+            cod_cliLabel.AutoSize = true;
+            cod_cliLabel.Enabled = false;
+            cod_cliLabel.Location = new System.Drawing.Point(12, 44);
+            cod_cliLabel.Name = "cod_cliLabel";
+            cod_cliLabel.Size = new System.Drawing.Size(43, 13);
+            cod_cliLabel.TabIndex = 1;
+            cod_cliLabel.Text = "Código:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(12, 70);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 3;
+            nomeLabel.Text = "Nome:";
+            // 
+            // data_nascLabel
+            // 
+            data_nascLabel.AutoSize = true;
+            data_nascLabel.Location = new System.Drawing.Point(3, 99);
+            data_nascLabel.Name = "data_nascLabel";
+            data_nascLabel.Size = new System.Drawing.Size(66, 13);
+            data_nascLabel.TabIndex = 5;
+            data_nascLabel.Text = "Nascimento:";
+            // 
+            // telefoneLabel
+            // 
+            telefoneLabel.AutoSize = true;
+            telefoneLabel.Location = new System.Drawing.Point(12, 122);
+            telefoneLabel.Name = "telefoneLabel";
+            telefoneLabel.Size = new System.Drawing.Size(52, 13);
+            telefoneLabel.TabIndex = 7;
+            telefoneLabel.Text = "Telefone:";
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Location = new System.Drawing.Point(12, 226);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(43, 13);
+            cidadeLabel.TabIndex = 9;
+            cidadeLabel.Text = "Cidade:";
+            // 
+            // ufLabel
+            // 
+            ufLabel.AutoSize = true;
+            ufLabel.Location = new System.Drawing.Point(12, 200);
+            ufLabel.Name = "ufLabel";
+            ufLabel.Size = new System.Drawing.Size(24, 13);
+            ufLabel.TabIndex = 11;
+            ufLabel.Text = "UF:";
+            // 
+            // bairroLabel
+            // 
+            bairroLabel.AutoSize = true;
+            bairroLabel.Location = new System.Drawing.Point(12, 278);
+            bairroLabel.Name = "bairroLabel";
+            bairroLabel.Size = new System.Drawing.Size(37, 13);
+            bairroLabel.TabIndex = 13;
+            bairroLabel.Text = "Bairro:";
+            // 
+            // cepLabel
+            // 
+            cepLabel.AutoSize = true;
+            cepLabel.Location = new System.Drawing.Point(12, 174);
+            cepLabel.Name = "cepLabel";
+            cepLabel.Size = new System.Drawing.Size(31, 13);
+            cepLabel.TabIndex = 15;
+            cepLabel.Text = "CEP:";
+            // 
+            // status_cliLabel
+            // 
+            status_cliLabel.AutoSize = true;
+            status_cliLabel.Location = new System.Drawing.Point(12, 307);
+            status_cliLabel.Name = "status_cliLabel";
+            status_cliLabel.Size = new System.Drawing.Size(40, 13);
+            status_cliLabel.TabIndex = 17;
+            status_cliLabel.Text = "Status:";
+            // 
+            // cod_usuLabel
+            // 
+            cod_usuLabel.AutoSize = true;
+            cod_usuLabel.Location = new System.Drawing.Point(3, 334);
+            cod_usuLabel.Name = "cod_usuLabel";
+            cod_usuLabel.Size = new System.Drawing.Size(46, 13);
+            cod_usuLabel.TabIndex = 19;
+            cod_usuLabel.Text = "Usuario:";
+            // 
+            // cpfLabel
+            // 
+            cpfLabel.AutoSize = true;
+            cpfLabel.Location = new System.Drawing.Point(12, 148);
+            cpfLabel.Name = "cpfLabel";
+            cpfLabel.Size = new System.Drawing.Size(27, 13);
+            cpfLabel.TabIndex = 21;
+            cpfLabel.Text = "CPF";
+            // 
+            // ruaLabel
+            // 
+            ruaLabel.AutoSize = true;
+            ruaLabel.Location = new System.Drawing.Point(12, 252);
+            ruaLabel.Name = "ruaLabel";
+            ruaLabel.Size = new System.Drawing.Size(30, 13);
+            ruaLabel.TabIndex = 23;
+            ruaLabel.Text = "Rua:";
             // 
             // dbServicoDataSet
             // 
@@ -144,6 +253,32 @@
             this.clienteBindingNavigator.TabIndex = 0;
             this.clienteBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -171,22 +306,16 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -194,7 +323,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
             // 
             // bindingNavigatorMoveLastItem
@@ -203,67 +332,31 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // clienteBindingNavigatorSaveItem
             // 
             this.clienteBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.clienteBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("clienteBindingNavigatorSaveItem.Image")));
             this.clienteBindingNavigatorSaveItem.Name = "clienteBindingNavigatorSaveItem";
-            this.clienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.clienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.clienteBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.clienteBindingNavigatorSaveItem.Click += new System.EventHandler(this.clienteBindingNavigatorSaveItem_Click);
-            // 
-            // cod_cliLabel
-            // 
-            cod_cliLabel.AutoSize = true;
-            cod_cliLabel.Enabled = false;
-            cod_cliLabel.Location = new System.Drawing.Point(12, 44);
-            cod_cliLabel.Name = "cod_cliLabel";
-            cod_cliLabel.Size = new System.Drawing.Size(43, 13);
-            cod_cliLabel.TabIndex = 1;
-            cod_cliLabel.Text = "Código:";
             // 
             // cod_cliTextBox
             // 
             this.cod_cliTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cod_cli", true));
+            this.cod_cliTextBox.Enabled = false;
             this.cod_cliTextBox.Location = new System.Drawing.Point(75, 41);
             this.cod_cliTextBox.Name = "cod_cliTextBox";
             this.cod_cliTextBox.Size = new System.Drawing.Size(200, 20);
             this.cod_cliTextBox.TabIndex = 2;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(12, 70);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(38, 13);
-            nomeLabel.TabIndex = 3;
-            nomeLabel.Text = "Nome:";
             // 
             // nomeTextBox
             // 
@@ -273,15 +366,6 @@
             this.nomeTextBox.Size = new System.Drawing.Size(200, 20);
             this.nomeTextBox.TabIndex = 4;
             // 
-            // data_nascLabel
-            // 
-            data_nascLabel.AutoSize = true;
-            data_nascLabel.Location = new System.Drawing.Point(3, 99);
-            data_nascLabel.Name = "data_nascLabel";
-            data_nascLabel.Size = new System.Drawing.Size(66, 13);
-            data_nascLabel.TabIndex = 5;
-            data_nascLabel.Text = "Nascimento:";
-            // 
             // data_nascDateTimePicker
             // 
             this.data_nascDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "data_nasc", true));
@@ -289,15 +373,6 @@
             this.data_nascDateTimePicker.Name = "data_nascDateTimePicker";
             this.data_nascDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.data_nascDateTimePicker.TabIndex = 6;
-            // 
-            // telefoneLabel
-            // 
-            telefoneLabel.AutoSize = true;
-            telefoneLabel.Location = new System.Drawing.Point(12, 122);
-            telefoneLabel.Name = "telefoneLabel";
-            telefoneLabel.Size = new System.Drawing.Size(52, 13);
-            telefoneLabel.TabIndex = 7;
-            telefoneLabel.Text = "Telefone:";
             // 
             // telefoneTextBox
             // 
@@ -307,139 +382,76 @@
             this.telefoneTextBox.Size = new System.Drawing.Size(200, 20);
             this.telefoneTextBox.TabIndex = 8;
             // 
-            // cidadeLabel
-            // 
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Location = new System.Drawing.Point(12, 148);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(43, 13);
-            cidadeLabel.TabIndex = 9;
-            cidadeLabel.Text = "Cidade:";
-            // 
             // cidadeTextBox
             // 
             this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cidade", true));
-            this.cidadeTextBox.Location = new System.Drawing.Point(75, 145);
+            this.cidadeTextBox.Enabled = false;
+            this.cidadeTextBox.Location = new System.Drawing.Point(75, 223);
             this.cidadeTextBox.Name = "cidadeTextBox";
             this.cidadeTextBox.Size = new System.Drawing.Size(200, 20);
             this.cidadeTextBox.TabIndex = 10;
             // 
-            // ufLabel
-            // 
-            ufLabel.AutoSize = true;
-            ufLabel.Location = new System.Drawing.Point(12, 174);
-            ufLabel.Name = "ufLabel";
-            ufLabel.Size = new System.Drawing.Size(24, 13);
-            ufLabel.TabIndex = 11;
-            ufLabel.Text = "UF:";
-            // 
             // ufTextBox
             // 
             this.ufTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "uf", true));
-            this.ufTextBox.Location = new System.Drawing.Point(75, 171);
+            this.ufTextBox.Enabled = false;
+            this.ufTextBox.Location = new System.Drawing.Point(75, 197);
             this.ufTextBox.Name = "ufTextBox";
             this.ufTextBox.Size = new System.Drawing.Size(200, 20);
             this.ufTextBox.TabIndex = 12;
             // 
-            // bairroLabel
-            // 
-            bairroLabel.AutoSize = true;
-            bairroLabel.Location = new System.Drawing.Point(12, 200);
-            bairroLabel.Name = "bairroLabel";
-            bairroLabel.Size = new System.Drawing.Size(37, 13);
-            bairroLabel.TabIndex = 13;
-            bairroLabel.Text = "Bairro:";
-            // 
             // bairroTextBox
             // 
             this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "bairro", true));
-            this.bairroTextBox.Location = new System.Drawing.Point(75, 197);
+            this.bairroTextBox.Enabled = false;
+            this.bairroTextBox.Location = new System.Drawing.Point(75, 275);
             this.bairroTextBox.Name = "bairroTextBox";
             this.bairroTextBox.Size = new System.Drawing.Size(200, 20);
             this.bairroTextBox.TabIndex = 14;
             // 
-            // cepLabel
-            // 
-            cepLabel.AutoSize = true;
-            cepLabel.Location = new System.Drawing.Point(12, 226);
-            cepLabel.Name = "cepLabel";
-            cepLabel.Size = new System.Drawing.Size(31, 13);
-            cepLabel.TabIndex = 15;
-            cepLabel.Text = "CEP:";
-            // 
             // cepTextBox
             // 
             this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cep", true));
-            this.cepTextBox.Location = new System.Drawing.Point(75, 223);
+            this.cepTextBox.Location = new System.Drawing.Point(75, 171);
             this.cepTextBox.Name = "cepTextBox";
             this.cepTextBox.Size = new System.Drawing.Size(200, 20);
             this.cepTextBox.TabIndex = 16;
-            // 
-            // status_cliLabel
-            // 
-            status_cliLabel.AutoSize = true;
-            status_cliLabel.Location = new System.Drawing.Point(12, 252);
-            status_cliLabel.Name = "status_cliLabel";
-            status_cliLabel.Size = new System.Drawing.Size(40, 13);
-            status_cliLabel.TabIndex = 17;
-            status_cliLabel.Text = "Status:";
+            this.cepTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cepTextBox_KeyDown);
             // 
             // status_cliComboBox
             // 
             this.status_cliComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "status_cli", true));
             this.status_cliComboBox.FormattingEnabled = true;
-            this.status_cliComboBox.Location = new System.Drawing.Point(75, 249);
+            this.status_cliComboBox.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.status_cliComboBox.Location = new System.Drawing.Point(75, 304);
             this.status_cliComboBox.Name = "status_cliComboBox";
             this.status_cliComboBox.Size = new System.Drawing.Size(200, 21);
             this.status_cliComboBox.TabIndex = 18;
             // 
-            // cod_usuLabel
-            // 
-            cod_usuLabel.AutoSize = true;
-            cod_usuLabel.Location = new System.Drawing.Point(3, 279);
-            cod_usuLabel.Name = "cod_usuLabel";
-            cod_usuLabel.Size = new System.Drawing.Size(68, 13);
-            cod_usuLabel.TabIndex = 19;
-            cod_usuLabel.Text = "Cod Usuario:";
-            // 
             // cod_usuTextBox
             // 
             this.cod_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cod_usu", true));
-            this.cod_usuTextBox.Location = new System.Drawing.Point(75, 276);
+            this.cod_usuTextBox.Enabled = false;
+            this.cod_usuTextBox.Location = new System.Drawing.Point(75, 331);
             this.cod_usuTextBox.Name = "cod_usuTextBox";
             this.cod_usuTextBox.Size = new System.Drawing.Size(200, 20);
             this.cod_usuTextBox.TabIndex = 20;
             // 
-            // cpfLabel
-            // 
-            cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(12, 305);
-            cpfLabel.Name = "cpfLabel";
-            cpfLabel.Size = new System.Drawing.Size(27, 13);
-            cpfLabel.TabIndex = 21;
-            cpfLabel.Text = "CPF";
-            // 
             // cpfTextBox
             // 
             this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(75, 302);
+            this.cpfTextBox.Location = new System.Drawing.Point(75, 145);
             this.cpfTextBox.Name = "cpfTextBox";
             this.cpfTextBox.Size = new System.Drawing.Size(200, 20);
             this.cpfTextBox.TabIndex = 22;
             // 
-            // ruaLabel
-            // 
-            ruaLabel.AutoSize = true;
-            ruaLabel.Location = new System.Drawing.Point(12, 331);
-            ruaLabel.Name = "ruaLabel";
-            ruaLabel.Size = new System.Drawing.Size(30, 13);
-            ruaLabel.TabIndex = 23;
-            ruaLabel.Text = "Rua:";
-            // 
             // ruaTextBox
             // 
             this.ruaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "rua", true));
-            this.ruaTextBox.Location = new System.Drawing.Point(75, 328);
+            this.ruaTextBox.Enabled = false;
+            this.ruaTextBox.Location = new System.Drawing.Point(75, 249);
             this.ruaTextBox.Name = "ruaTextBox";
             this.ruaTextBox.Size = new System.Drawing.Size(200, 20);
             this.ruaTextBox.TabIndex = 24;
@@ -475,7 +487,7 @@
             this.Controls.Add(this.ruaTextBox);
             this.Controls.Add(this.clienteBindingNavigator);
             this.Name = "frmCadCli";
-            this.Text = "frmCadCli";
+            this.Text = "Cadastro Cliente";
             this.Load += new System.EventHandler(this.frmCadCli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
