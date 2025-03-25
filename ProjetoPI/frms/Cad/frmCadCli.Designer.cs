@@ -39,7 +39,6 @@
             System.Windows.Forms.Label cepLabel;
             System.Windows.Forms.Label status_cliLabel;
             System.Windows.Forms.Label cod_usuLabel;
-            System.Windows.Forms.Label cpfLabel;
             System.Windows.Forms.Label ruaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCli));
             this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
@@ -69,7 +68,6 @@
             this.cepTextBox = new System.Windows.Forms.TextBox();
             this.status_cliComboBox = new System.Windows.Forms.ComboBox();
             this.cod_usuTextBox = new System.Windows.Forms.TextBox();
-            this.cpfTextBox = new System.Windows.Forms.TextBox();
             this.ruaTextBox = new System.Windows.Forms.TextBox();
             cod_cliLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
@@ -81,7 +79,6 @@
             cepLabel = new System.Windows.Forms.Label();
             status_cliLabel = new System.Windows.Forms.Label();
             cod_usuLabel = new System.Windows.Forms.Label();
-            cpfLabel = new System.Windows.Forms.Label();
             ruaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -179,15 +176,6 @@
             cod_usuLabel.Size = new System.Drawing.Size(46, 13);
             cod_usuLabel.TabIndex = 19;
             cod_usuLabel.Text = "Usuario:";
-            // 
-            // cpfLabel
-            // 
-            cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(12, 148);
-            cpfLabel.Name = "cpfLabel";
-            cpfLabel.Size = new System.Drawing.Size(27, 13);
-            cpfLabel.TabIndex = 21;
-            cpfLabel.Text = "CPF";
             // 
             // ruaLabel
             // 
@@ -439,14 +427,6 @@
             this.cod_usuTextBox.Size = new System.Drawing.Size(200, 20);
             this.cod_usuTextBox.TabIndex = 20;
             // 
-            // cpfTextBox
-            // 
-            this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(75, 145);
-            this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cpfTextBox.TabIndex = 22;
-            // 
             // ruaTextBox
             // 
             this.ruaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "rua", true));
@@ -481,7 +461,6 @@
             this.Controls.Add(this.status_cliComboBox);
             this.Controls.Add(cod_usuLabel);
             this.Controls.Add(this.cod_usuTextBox);
-            this.Controls.Add(cpfLabel);
             this.Controls.Add(this.cpfTextBox);
             this.Controls.Add(ruaLabel);
             this.Controls.Add(this.ruaTextBox);
