@@ -461,7 +461,6 @@
             this.Controls.Add(this.status_cliComboBox);
             this.Controls.Add(cod_usuLabel);
             this.Controls.Add(this.cod_usuTextBox);
-            this.Controls.Add(this.cpfTextBox);
             this.Controls.Add(ruaLabel);
             this.Controls.Add(this.ruaTextBox);
             this.Controls.Add(this.clienteBindingNavigator);
