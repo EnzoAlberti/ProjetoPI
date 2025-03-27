@@ -40,6 +40,7 @@
             System.Windows.Forms.Label ufLabel;
             System.Windows.Forms.Label cepLabel;
             System.Windows.Forms.Label cod_usuLabel;
+            System.Windows.Forms.Label statusLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFor));
             this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -69,6 +70,7 @@
             this.ufTextBox = new System.Windows.Forms.TextBox();
             this.cepTextBox = new System.Windows.Forms.TextBox();
             this.cod_usuTextBox = new System.Windows.Forms.TextBox();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
             cod_forLabel = new System.Windows.Forms.Label();
             nome_fantLabel = new System.Windows.Forms.Label();
             cnpjLabel = new System.Windows.Forms.Label();
@@ -80,6 +82,7 @@
             ufLabel = new System.Windows.Forms.Label();
             cepLabel = new System.Windows.Forms.Label();
             cod_usuLabel = new System.Windows.Forms.Label();
+            statusLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingNavigator)).BeginInit();
@@ -179,11 +182,20 @@
             // cod_usuLabel
             // 
             cod_usuLabel.AutoSize = true;
-            cod_usuLabel.Location = new System.Drawing.Point(12, 300);
+            cod_usuLabel.Location = new System.Drawing.Point(12, 327);
             cod_usuLabel.Name = "cod_usuLabel";
             cod_usuLabel.Size = new System.Drawing.Size(46, 13);
             cod_usuLabel.TabIndex = 21;
             cod_usuLabel.Text = "Usuário:";
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new System.Drawing.Point(11, 300);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(40, 13);
+            statusLabel.TabIndex = 23;
+            statusLabel.Text = "Status:";
             // 
             // dbServicoDataSet
             // 
@@ -248,6 +260,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click_1);
             // 
             // bindingNavigatorCountItem
             // 
@@ -341,7 +354,7 @@
             this.cod_forTextBox.Enabled = false;
             this.cod_forTextBox.Location = new System.Drawing.Point(75, 37);
             this.cod_forTextBox.Name = "cod_forTextBox";
-            this.cod_forTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cod_forTextBox.Size = new System.Drawing.Size(143, 20);
             this.cod_forTextBox.TabIndex = 2;
             // 
             // nome_fantTextBox
@@ -349,7 +362,7 @@
             this.nome_fantTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "nome_fant", true));
             this.nome_fantTextBox.Location = new System.Drawing.Point(75, 63);
             this.nome_fantTextBox.Name = "nome_fantTextBox";
-            this.nome_fantTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nome_fantTextBox.Size = new System.Drawing.Size(143, 20);
             this.nome_fantTextBox.TabIndex = 4;
             // 
             // cnpjTextBox
@@ -357,7 +370,7 @@
             this.cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "cnpj", true));
             this.cnpjTextBox.Location = new System.Drawing.Point(75, 89);
             this.cnpjTextBox.Name = "cnpjTextBox";
-            this.cnpjTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cnpjTextBox.Size = new System.Drawing.Size(143, 20);
             this.cnpjTextBox.TabIndex = 6;
             // 
             // emailTextBox
@@ -365,7 +378,7 @@
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "email", true));
             this.emailTextBox.Location = new System.Drawing.Point(75, 115);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(100, 20);
+            this.emailTextBox.Size = new System.Drawing.Size(143, 20);
             this.emailTextBox.TabIndex = 8;
             // 
             // telefoneTextBox
@@ -373,7 +386,7 @@
             this.telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "telefone", true));
             this.telefoneTextBox.Location = new System.Drawing.Point(75, 141);
             this.telefoneTextBox.Name = "telefoneTextBox";
-            this.telefoneTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telefoneTextBox.Size = new System.Drawing.Size(143, 20);
             this.telefoneTextBox.TabIndex = 10;
             // 
             // ruaTextBox
@@ -382,7 +395,7 @@
             this.ruaTextBox.Enabled = false;
             this.ruaTextBox.Location = new System.Drawing.Point(75, 219);
             this.ruaTextBox.Name = "ruaTextBox";
-            this.ruaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ruaTextBox.Size = new System.Drawing.Size(143, 20);
             this.ruaTextBox.TabIndex = 12;
             // 
             // bairroTextBox
@@ -391,7 +404,7 @@
             this.bairroTextBox.Enabled = false;
             this.bairroTextBox.Location = new System.Drawing.Point(75, 271);
             this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(100, 20);
+            this.bairroTextBox.Size = new System.Drawing.Size(143, 20);
             this.bairroTextBox.TabIndex = 14;
             // 
             // cidadeTextBox
@@ -400,7 +413,7 @@
             this.cidadeTextBox.Enabled = false;
             this.cidadeTextBox.Location = new System.Drawing.Point(75, 245);
             this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cidadeTextBox.Size = new System.Drawing.Size(143, 20);
             this.cidadeTextBox.TabIndex = 16;
             // 
             // ufTextBox
@@ -409,7 +422,7 @@
             this.ufTextBox.Enabled = false;
             this.ufTextBox.Location = new System.Drawing.Point(75, 193);
             this.ufTextBox.Name = "ufTextBox";
-            this.ufTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ufTextBox.Size = new System.Drawing.Size(143, 20);
             this.ufTextBox.TabIndex = 18;
             // 
             // cepTextBox
@@ -417,23 +430,38 @@
             this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "cep", true));
             this.cepTextBox.Location = new System.Drawing.Point(75, 167);
             this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cepTextBox.Size = new System.Drawing.Size(143, 20);
             this.cepTextBox.TabIndex = 20;
+            this.cepTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cepTextBox_KeyDown_1);
             // 
             // cod_usuTextBox
             // 
             this.cod_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "cod_usu", true));
             this.cod_usuTextBox.Enabled = false;
-            this.cod_usuTextBox.Location = new System.Drawing.Point(75, 297);
+            this.cod_usuTextBox.Location = new System.Drawing.Point(75, 324);
             this.cod_usuTextBox.Name = "cod_usuTextBox";
-            this.cod_usuTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cod_usuTextBox.Size = new System.Drawing.Size(143, 20);
             this.cod_usuTextBox.TabIndex = 22;
+            // 
+            // statusComboBox
+            // 
+            this.statusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fornecedorBindingSource, "status", true));
+            this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.statusComboBox.Location = new System.Drawing.Point(75, 297);
+            this.statusComboBox.Name = "statusComboBox";
+            this.statusComboBox.Size = new System.Drawing.Size(143, 21);
+            this.statusComboBox.TabIndex = 24;
             // 
             // frmCadFor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 423);
+            this.Controls.Add(statusLabel);
+            this.Controls.Add(this.statusComboBox);
             this.Controls.Add(cod_forLabel);
             this.Controls.Add(this.cod_forTextBox);
             this.Controls.Add(nome_fantLabel);
@@ -500,5 +528,6 @@
         private System.Windows.Forms.TextBox ufTextBox;
         private System.Windows.Forms.TextBox cepTextBox;
         private System.Windows.Forms.TextBox cod_usuTextBox;
+        private System.Windows.Forms.ComboBox statusComboBox;
     }
 }

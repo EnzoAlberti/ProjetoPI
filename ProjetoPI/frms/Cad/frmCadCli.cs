@@ -37,6 +37,12 @@ namespace ProjetoPI
                     MessageBox.Show("O cep deve ser preenchido");
                 if (bairroTextBox.Text == "")
                     MessageBox.Show("O bairro deve ser preenchido");
+                if (tipo_docComboBox.Text == "")
+                    MessageBox.Show("O tipo de documento deve ser preenchido");
+                if (docTextBox.Text == "")
+                    MessageBox.Show("O documento deve ser preenchido");
+                if (status_cliComboBox.Text == "")
+                    MessageBox.Show("O status do cliente deve ser preenchido");
                 else
                 {
                     data_nascDateTimePicker.Text = DateTime.Now.ToString();

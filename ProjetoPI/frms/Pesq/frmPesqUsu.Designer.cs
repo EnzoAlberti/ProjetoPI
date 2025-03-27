@@ -170,6 +170,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_usu";
             this.dataGridViewTextBoxColumn1.HeaderText = "cod_usu";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -230,6 +231,7 @@
             this.dataGridViewTextBoxColumn11.DataPropertyName = "senha";
             this.dataGridViewTextBoxColumn11.HeaderText = "senha";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Visible = false;
             // 
             // frmPesqUsu
             // 

@@ -199,12 +199,13 @@
             this.dataGridViewTextBoxColumn7.DataPropertyName = "cod_usu";
             this.dataGridViewTextBoxColumn7.HeaderText = "cod_usu";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // frmPesqPro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 450);
+            this.ClientSize = new System.Drawing.Size(742, 450);
             this.Controls.Add(this.produtoDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPesqPro";

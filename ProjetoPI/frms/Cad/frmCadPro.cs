@@ -31,6 +31,10 @@ namespace ProjetoPI
                     MessageBox.Show("A cor deve ser preenchida");
                 if (tamanhoComboBox.Text == "")
                     MessageBox.Show("O tamanho deve ser preenchido");
+                if (quantidadeTextBox.Text == "")
+                    MessageBox.Show("A quantidade deve ser preenchida");
+                if (statusComboBox.Text == "")
+                    MessageBox.Show("A quantidade deve ser preenchida");
                 else
                 {
                     this.Validate();

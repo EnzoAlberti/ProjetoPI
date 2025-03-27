@@ -159,6 +159,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_ped";
             this.dataGridViewTextBoxColumn1.HeaderText = "cod_ped";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -171,6 +172,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "cod_cli";
             this.dataGridViewTextBoxColumn3.HeaderText = "cod_cli";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 

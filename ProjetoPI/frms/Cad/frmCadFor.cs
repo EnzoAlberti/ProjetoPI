@@ -39,6 +39,8 @@ namespace ProjetoPI
                     MessageBox.Show("O cep deve ser preenchido");
                 if (bairroTextBox.Text == "")
                     MessageBox.Show("O bairro deve ser preenchido");
+                if(statusComboBox.Text == "")
+                    MessageBox.Show("O status deve ser preenchido");
                 else
                 {
                     this.Validate();
@@ -116,8 +118,7 @@ namespace ProjetoPI
             cidadeTextBox.Enabled = true;
             ufTextBox.Enabled = true;
         }
-
-        private async void cepTextBox_KeyDown(object sender, KeyEventArgs e)
+        private async void cepTextBox_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -125,7 +126,8 @@ namespace ProjetoPI
                 await BuscarCEP();
             }
         }
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+
+        private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
         {
             cod_usuTextBox.Text = frmLogin.SessaoUsuario.CodUsuLog.ToString();
         }
