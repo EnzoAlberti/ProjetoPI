@@ -40,7 +40,7 @@ namespace ProjetoPI
             {
                 if (cbmFiltrar.Text == "Código")
                 {
-                    string sql = "select * from Cliente where cod_cli = " + txtPesquisar.Text + "";
+                    string sql = "select * from Produto where cod_pro = " + txtPesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     cn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -51,7 +51,7 @@ namespace ProjetoPI
                 }
                 if (cbmFiltrar.Text == "Marca")
                 {
-                    string sql = "select * from Cliente where marca like '%" + txtPesquisar.Text + "%'";
+                    string sql = "select * from Produto where marca like '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();
@@ -60,7 +60,7 @@ namespace ProjetoPI
                 }
                 if(cbmFiltrar.Text == "Cor")
                 {
-                    string sql = "select * from Cliente where cor like '%" + txtPesquisar.Text + "%'";
+                    string sql = "select * from Produto where cor like '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();
