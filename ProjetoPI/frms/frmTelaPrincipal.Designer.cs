@@ -48,6 +48,8 @@
             this.produtoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedorToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.extratoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imagemDeFundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbUsuario = new System.Windows.Forms.ToolStripButton();
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
@@ -59,8 +61,6 @@
             this.tsslNomePC = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslData = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imagemDeFundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -212,6 +212,21 @@
             this.extratoToolStripMenuItem1.Text = "Extrato";
             this.extratoToolStripMenuItem1.Click += new System.EventHandler(this.extratoToolStripMenuItem1_Click);
             // 
+            // configuraçõesToolStripMenuItem
+            // 
+            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.imagemDeFundoToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.configuraçõesToolStripMenuItem.Text = "Configurações";
+            // 
+            // imagemDeFundoToolStripMenuItem
+            // 
+            this.imagemDeFundoToolStripMenuItem.Name = "imagemDeFundoToolStripMenuItem";
+            this.imagemDeFundoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagemDeFundoToolStripMenuItem.Text = "Imagem de fundo";
+            this.imagemDeFundoToolStripMenuItem.Click += new System.EventHandler(this.imagemDeFundoToolStripMenuItem_Click);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -311,20 +326,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // configuraçõesToolStripMenuItem
-            // 
-            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imagemDeFundoToolStripMenuItem});
-            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
-            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.configuraçõesToolStripMenuItem.Text = "Configurações";
-            // 
-            // imagemDeFundoToolStripMenuItem
-            // 
-            this.imagemDeFundoToolStripMenuItem.Name = "imagemDeFundoToolStripMenuItem";
-            this.imagemDeFundoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.imagemDeFundoToolStripMenuItem.Text = "Imagem de fundo";
             // 
             // frmTelaPrincipal
             // 

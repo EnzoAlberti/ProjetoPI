@@ -16,6 +16,34 @@ namespace ProjetoPI
         {
             InitializeComponent();
         }
+        public void ApplyBackgroundSettings()
+        {
+            if (Properties.Settings.Default.BackgroundColor != Color.Empty)
+            {
+                if (this.IsMdiContainer)
+                {
+                    foreach (Control ctl in this.Controls)
+                    {
+                        if (ctl is MdiClient)
+                        {
+                            ctl.BackColor = Properties.Settings.Default.BackgroundColor;
+                        }
+                    }
+                }
+                else
+                {
+                    this.BackColor = Properties.Settings.Default.BackgroundColor;
+                }
+            }
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.BackgroundImage))
+            {
+                this.BackgroundImage = Image.FromFile(Properties.Settings.Default.BackgroundImage);
+            }
+            else
+            {
+                this.BackgroundImage = null;
+            }
+        }
         public void exibefrmCadUsu()
         {
             try
@@ -388,6 +416,7 @@ namespace ProjetoPI
             {
                 tsslIP.Text = "IP: " + myIP;
             }
+            ApplyBackgroundSettings();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -509,6 +538,12 @@ namespace ProjetoPI
         private void extratoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             exibefrmRelatExt();
+        }
+
+        private void imagemDeFundoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConfigBackground ConfigForm = new frmConfigBackground();
+            ConfigForm.ShowDialog();
         }
     }
 }

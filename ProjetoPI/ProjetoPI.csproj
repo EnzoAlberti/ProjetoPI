@@ -73,34 +73,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatCli.cs">
+    <Compile Include="frms\frmConfigBackground.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatCli.Designer.cs">
+    <Compile Include="frms\frmConfigBackground.Designer.cs">
+      <DependentUpon>frmConfigBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Relat\frmRelatCli.Designer.cs">
       <DependentUpon>frmRelatCli.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatExt.cs">
+    <Compile Include="frms\Relat\frmRelatExt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatExt.Designer.cs">
+    <Compile Include="frms\Relat\frmRelatExt.Designer.cs">
       <DependentUpon>frmRelatExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatFor.cs">
+    <Compile Include="frms\Relat\frmRelatFor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatFor.Designer.cs">
+    <Compile Include="frms\Relat\frmRelatFor.Designer.cs">
       <DependentUpon>frmRelatFor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatPro.cs">
+    <Compile Include="frms\Relat\frmRelatPro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatPro.Designer.cs">
+    <Compile Include="frms\Relat\frmRelatPro.Designer.cs">
       <DependentUpon>frmRelatPro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatUsu.cs">
+    <Compile Include="frms\Relat\frmRelatUsu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatUsu.Designer.cs">
+    <Compile Include="frms\Relat\frmRelatUsu.Designer.cs">
       <DependentUpon>frmRelatUsu.cs</DependentUpon>
     </Compile>
     <Compile Include="frms\Cad\frmCadUsu.cs">
@@ -178,19 +184,22 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="frmRelatCli.resx">
+    <EmbeddedResource Include="frms\frmConfigBackground.resx">
+      <DependentUpon>frmConfigBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\Relat\frmRelatCli.resx">
       <DependentUpon>frmRelatCli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatExt.resx">
+    <EmbeddedResource Include="frms\Relat\frmRelatExt.resx">
       <DependentUpon>frmRelatExt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatFor.resx">
+    <EmbeddedResource Include="frms\Relat\frmRelatFor.resx">
       <DependentUpon>frmRelatFor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatPro.resx">
+    <EmbeddedResource Include="frms\Relat\frmRelatPro.resx">
       <DependentUpon>frmRelatPro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatUsu.resx">
+    <EmbeddedResource Include="frms\Relat\frmRelatUsu.resx">
       <DependentUpon>frmRelatUsu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frms\Cad\frmCadCli.resx">
