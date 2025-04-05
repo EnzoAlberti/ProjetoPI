@@ -66,7 +66,7 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 50);
+            this.groupBox1.Size = new System.Drawing.Size(1042, 50);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -162,7 +162,7 @@
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
             this.usuarioDataGridView.Location = new System.Drawing.Point(0, 45);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
-            this.usuarioDataGridView.Size = new System.Drawing.Size(800, 404);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(1042, 404);
             this.usuarioDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -237,10 +237,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1042, 450);
             this.Controls.Add(this.usuarioDataGridView);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqUsu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa de Usuário";
             this.Load += new System.EventHandler(this.frmPesqUsu_Load);
             this.groupBox1.ResumeLayout(false);

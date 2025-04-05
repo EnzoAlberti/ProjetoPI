@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label emailLabel;
-            System.Windows.Forms.Label senhaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.UsuarioTableAdapter();
@@ -43,32 +42,12 @@
             this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dbServicoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.senhaTextBox = new System.Windows.Forms.TextBox();
-            emailLabel = new System.Windows.Forms.Label();
-            senhaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(11, 128);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(34, 13);
-            emailLabel.TabIndex = 1;
-            emailLabel.Text = "email:";
-            // 
-            // senhaLabel
-            // 
-            senhaLabel.AutoSize = true;
-            senhaLabel.Location = new System.Drawing.Point(11, 155);
-            senhaLabel.Name = "senhaLabel";
-            senhaLabel.Size = new System.Drawing.Size(39, 13);
-            senhaLabel.TabIndex = 3;
-            senhaLabel.Text = "senha:";
             // 
             // dbServicoDataSet
             // 
@@ -101,31 +80,36 @@
             this.emailComboBox.DataSource = this.usuarioBindingSource;
             this.emailComboBox.DisplayMember = "email";
             this.emailComboBox.FormattingEnabled = true;
-            this.emailComboBox.Location = new System.Drawing.Point(51, 125);
+            this.emailComboBox.Location = new System.Drawing.Point(135, 138);
             this.emailComboBox.Name = "emailComboBox";
             this.emailComboBox.Size = new System.Drawing.Size(121, 21);
             this.emailComboBox.TabIndex = 2;
+            this.emailComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.emailComboBox_KeyDown);
             // 
             // btnEntrar
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnEntrar.Location = new System.Drawing.Point(231, 123);
+            this.btnEntrar.Enabled = false;
+            this.btnEntrar.Location = new System.Drawing.Point(306, 166);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 5;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Visible = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.LightCoral;
-            this.btnSair.Location = new System.Drawing.Point(231, 155);
+            this.btnSair.Enabled = false;
+            this.btnSair.Location = new System.Drawing.Point(306, 198);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 6;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Visible = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // clienteBindingSource
@@ -149,28 +133,36 @@
             // 
             // senhaTextBox
             // 
-            this.senhaTextBox.Location = new System.Drawing.Point(51, 152);
+            this.senhaTextBox.Location = new System.Drawing.Point(135, 165);
             this.senhaTextBox.Name = "senhaTextBox";
             this.senhaTextBox.Size = new System.Drawing.Size(121, 20);
             this.senhaTextBox.TabIndex = 7;
-            this.senhaTextBox.UseSystemPasswordChar = true;
+            this.senhaTextBox.Text = "Senha";
+            this.senhaTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.senhaTextBox_MouseClick);
+            this.senhaTextBox.TextChanged += new System.EventHandler(this.senhaTextBox_TextChanged);
+            this.senhaTextBox.Enter += new System.EventHandler(this.senhaTextBox_Enter);
+            this.senhaTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.senhaTextBox_KeyDown);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 223);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(381, 223);
+            this.ControlBox = false;
             this.Controls.Add(this.senhaTextBox);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(senhaLabel);
-            this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();

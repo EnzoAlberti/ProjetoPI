@@ -1,6 +1,6 @@
 ﻿namespace ProjetoPI
 {
-    partial class frmRelatUsu
+    partial class frmRelatPro
     {
         /// <summary>
         /// Required designer variable.
@@ -30,52 +30,52 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.usuarioTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.UsuarioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.produtoTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ProdutoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.dbServicoDataSet;
-            // 
-            // dbServicoDataSet
-            // 
-            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
-            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.usuarioBindingSource;
+            reportDataSource1.Value = this.produtoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoPI.frms.Relat.Relat.RelatUsu.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoPI.frms.Relat.Relat.RelatPro.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // usuarioTableAdapter
+            // dbServicoDataSet
             // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
+            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
+            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // frmRelatUsu
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataMember = "Produto";
+            this.produtoBindingSource.DataSource = this.dbServicoDataSet;
+            // 
+            // produtoTableAdapter
+            // 
+            this.produtoTableAdapter.ClearBeforeFill = true;
+            // 
+            // frmRelatPro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmRelatUsu";
-            this.Text = "Relatório de Usuário";
-            this.Load += new System.EventHandler(this.frmRelatUsu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            this.Name = "frmRelatPro";
+            this.Text = "frmRelatPro";
+            this.Load += new System.EventHandler(this.frmRelatPro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,7 +84,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private dbServicoDataSet dbServicoDataSet;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private dbServicoDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private System.Windows.Forms.BindingSource produtoBindingSource;
+        private dbServicoDataSetTableAdapters.ProdutoTableAdapter produtoTableAdapter;
     }
 }

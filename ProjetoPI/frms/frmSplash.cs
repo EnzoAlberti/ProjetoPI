@@ -28,7 +28,7 @@ namespace ProjetoPI
 
         private void frmSplash_Load(object sender, EventArgs e)
         {
-            this.Opacity = 0.9;
+            this.Opacity = 1;
             for(double cont = 0.99;cont > 1; cont++)
             {
                 this.Opacity = cont;

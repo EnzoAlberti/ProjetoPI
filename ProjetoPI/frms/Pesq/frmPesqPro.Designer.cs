@@ -62,7 +62,7 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 50);
+            this.groupBox1.Size = new System.Drawing.Size(1851, 50);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -83,7 +83,7 @@
             this.cbmFiltrar.Items.AddRange(new object[] {
             "Código",
             "Marca",
-            "Cor"});
+            "Nome"});
             this.cbmFiltrar.Location = new System.Drawing.Point(66, 17);
             this.cbmFiltrar.Name = "cbmFiltrar";
             this.cbmFiltrar.Size = new System.Drawing.Size(80, 21);
@@ -153,9 +153,9 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.produtoDataGridView.DataSource = this.produtoBindingSource;
-            this.produtoDataGridView.Location = new System.Drawing.Point(0, 45);
+            this.produtoDataGridView.Location = new System.Drawing.Point(29, 45);
             this.produtoDataGridView.Name = "produtoDataGridView";
-            this.produtoDataGridView.Size = new System.Drawing.Size(741, 407);
+            this.produtoDataGridView.Size = new System.Drawing.Size(1859, 886);
             this.produtoDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -205,11 +205,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 450);
+            this.ClientSize = new System.Drawing.Size(1855, 930);
+            this.ControlBox = false;
             this.Controls.Add(this.produtoDataGridView);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqPro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa de Produto";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPesqPro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -24,21 +24,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox2">
+                    <Textbox Name="Textbox1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>cod usu</Value>
+                              <Value>ID Usuário</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -54,21 +54,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox4">
+                    <Textbox Name="Textbox3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nome</Value>
+                              <Value>Nome</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -84,21 +84,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox6">
+                    <Textbox Name="Textbox5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>telefone</Value>
+                              <Value>Telefone</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -114,21 +114,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox13">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>email</Value>
+                              <Value>Status</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -239,21 +239,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="email">
+                    <Textbox Name="status">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!email.Value</Value>
+                              <Value>=Fields!status.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>email</rd:DefaultName>
+                      <rd:DefaultName>status</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -290,8 +290,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.63724cm</Top>
-        <Left>3.83328cm</Left>
+        <Top>1.84891cm</Top>
+        <Left>2.9337cm</Left>
         <Height>1.2cm</Height>
         <Width>10cm</Width>
         <Style>
@@ -304,21 +304,21 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.76401in</Width>
+  <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>2.56646cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox1">
+        <Textbox Name="Textbox15">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Relatório de usuario</Value>
+                  <Value>Relatório de Usuários</Value>
                   <Style>
                     <FontSize>22pt</FontSize>
                   </Style>
@@ -327,11 +327,11 @@
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.89641cm</Top>
-          <Left>4.67932cm</Left>
-          <Height>0.9175cm</Height>
-          <Width>7.28896cm</Width>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>0.68474cm</Top>
+          <Left>4.17724cm</Left>
+          <Height>0.94396cm</Height>
+          <Width>7.76521cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -375,7 +375,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>7d251983-5f71-48ce-87e1-ca29be413e46</rd:DataSourceID>
+      <rd:DataSourceID>0936d68f-ad96-410f-877c-a8c381172f1b</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -429,10 +429,14 @@
           <DataField>senha</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="status">
+          <DataField>status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>dbServicoDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\enzog\source\repos\ProjetoPI\ProjetoPI\dbServicoDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\enzo.gfalberti\Source\Repos\ProjetoPI\ProjetoPI\dbServicoDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Usuario</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -441,5 +445,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>0e26a09e-94ed-4079-b5cf-7851456cd54c</rd:ReportID>
+  <rd:ReportID>b8959986-8ad8-4e88-b3ba-1462a100d2d0</rd:ReportID>
 </Report>

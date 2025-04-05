@@ -40,7 +40,6 @@
             this.clienteTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ClienteTableAdapter();
             this.tableAdapterManager = new ProjetoPI.dbServicoDataSetTableAdapters.TableAdapterManager();
             this.clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,7 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -70,7 +70,7 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(800, 50);
+            this.groupBox1.Size = new System.Drawing.Size(1343, 50);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -168,13 +168,8 @@
             this.clienteDataGridView.DataSource = this.clienteBindingSource1;
             this.clienteDataGridView.Location = new System.Drawing.Point(0, 45);
             this.clienteDataGridView.Name = "clienteDataGridView";
-            this.clienteDataGridView.Size = new System.Drawing.Size(800, 408);
+            this.clienteDataGridView.Size = new System.Drawing.Size(1343, 408);
             this.clienteDataGridView.TabIndex = 1;
-            // 
-            // clienteBindingSource1
-            // 
-            this.clienteBindingSource1.DataMember = "Cliente";
-            this.clienteBindingSource1.DataSource = this.dbServicoDataSet;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -255,13 +250,19 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "tipo_doc";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataMember = "Cliente";
+            this.clienteBindingSource1.DataSource = this.dbServicoDataSet;
+            // 
             // frmPesqCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 453);
+            this.ClientSize = new System.Drawing.Size(1344, 453);
             this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqCli";
             this.Text = "Pesquisar Cliente";
             this.Load += new System.EventHandler(this.frmPesqCli_Load);

@@ -190,9 +190,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 450);
+            this.ClientSize = new System.Drawing.Size(542, 450);
             this.Controls.Add(this.pedido_notaDataGridView);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqExt";
             this.Text = "Pesquisa de Extrato";
             this.Load += new System.EventHandler(this.frmPesqExt_Load);

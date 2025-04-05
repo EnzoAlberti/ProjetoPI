@@ -40,9 +40,9 @@
             System.Windows.Forms.Label status_cliLabel;
             System.Windows.Forms.Label cod_usuLabel;
             System.Windows.Forms.Label ruaLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCli));
             System.Windows.Forms.Label tipo_docLabel;
             System.Windows.Forms.Label docLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadCli));
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.clienteTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ClienteTableAdapter();
@@ -96,7 +96,6 @@
             // 
             cod_cliLabel.AutoSize = true;
             cod_cliLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "tipo_doc", true));
-            cod_cliLabel.Enabled = false;
             cod_cliLabel.Location = new System.Drawing.Point(12, 44);
             cod_cliLabel.Name = "cod_cliLabel";
             cod_cliLabel.Size = new System.Drawing.Size(43, 13);
@@ -202,6 +201,24 @@
             ruaLabel.Size = new System.Drawing.Size(30, 13);
             ruaLabel.TabIndex = 23;
             ruaLabel.Text = "Rua:";
+            // 
+            // tipo_docLabel
+            // 
+            tipo_docLabel.AutoSize = true;
+            tipo_docLabel.Location = new System.Drawing.Point(3, 148);
+            tipo_docLabel.Name = "tipo_docLabel";
+            tipo_docLabel.Size = new System.Drawing.Size(89, 13);
+            tipo_docLabel.TabIndex = 24;
+            tipo_docLabel.Text = "Tipo Documento:";
+            // 
+            // docLabel
+            // 
+            docLabel.AutoSize = true;
+            docLabel.Location = new System.Drawing.Point(3, 171);
+            docLabel.Name = "docLabel";
+            docLabel.Size = new System.Drawing.Size(65, 13);
+            docLabel.TabIndex = 25;
+            docLabel.Text = "Documento:";
             // 
             // clienteTableAdapter
             // 
@@ -442,24 +459,6 @@
             this.ruaTextBox.Name = "ruaTextBox";
             this.ruaTextBox.Size = new System.Drawing.Size(200, 20);
             this.ruaTextBox.TabIndex = 24;
-            // 
-            // tipo_docLabel
-            // 
-            tipo_docLabel.AutoSize = true;
-            tipo_docLabel.Location = new System.Drawing.Point(3, 148);
-            tipo_docLabel.Name = "tipo_docLabel";
-            tipo_docLabel.Size = new System.Drawing.Size(89, 13);
-            tipo_docLabel.TabIndex = 24;
-            tipo_docLabel.Text = "Tipo Documento:";
-            // 
-            // docLabel
-            // 
-            docLabel.AutoSize = true;
-            docLabel.Location = new System.Drawing.Point(3, 171);
-            docLabel.Name = "docLabel";
-            docLabel.Size = new System.Drawing.Size(65, 13);
-            docLabel.TabIndex = 25;
-            docLabel.Text = "Documento:";
             // 
             // docTextBox
             // 

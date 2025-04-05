@@ -73,34 +73,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatCli.cs">
+    <Compile Include="frmRelatCli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatCli.Designer.cs">
+    <Compile Include="frmRelatCli.Designer.cs">
       <DependentUpon>frmRelatCli.cs</DependentUpon>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatExt.cs">
+    <Compile Include="frmRelatExt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatExt.Designer.cs">
+    <Compile Include="frmRelatExt.Designer.cs">
       <DependentUpon>frmRelatExt.cs</DependentUpon>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatFor.cs">
+    <Compile Include="frmRelatFor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatFor.Designer.cs">
+    <Compile Include="frmRelatFor.Designer.cs">
       <DependentUpon>frmRelatFor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatPro.cs">
+    <Compile Include="frmRelatPro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatPro.Designer.cs">
+    <Compile Include="frmRelatPro.Designer.cs">
       <DependentUpon>frmRelatPro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatUsu.cs">
+    <Compile Include="frmRelatUsu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frms\Relat\frmRelatUsu.Designer.cs">
+    <Compile Include="frmRelatUsu.Designer.cs">
       <DependentUpon>frmRelatUsu.cs</DependentUpon>
     </Compile>
     <Compile Include="frms\Cad\frmCadUsu.cs">
@@ -178,6 +178,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmRelatCli.resx">
+      <DependentUpon>frmRelatCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatExt.resx">
+      <DependentUpon>frmRelatExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatFor.resx">
+      <DependentUpon>frmRelatFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatPro.resx">
+      <DependentUpon>frmRelatPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatUsu.resx">
+      <DependentUpon>frmRelatUsu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frms\Cad\frmCadCli.resx">
       <DependentUpon>frmCadCli.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,26 +229,6 @@
     <EmbeddedResource Include="frms\Pesq\frmPesqUsu.resx">
       <DependentUpon>frmPesqUsu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frms\Relat\frmRelatCli.resx">
-      <DependentUpon>frmRelatCli.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frms\Relat\frmRelatExt.resx">
-      <DependentUpon>frmRelatExt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frms\Relat\frmRelatFor.resx">
-      <DependentUpon>frmRelatFor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frms\Relat\frmRelatPro.resx">
-      <DependentUpon>frmRelatPro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frms\Relat\frmRelatUsu.resx">
-      <DependentUpon>frmRelatUsu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frms\Relat\Relat\RelatCli.rdlc" />
-    <EmbeddedResource Include="frms\Relat\Relat\RelatExt.rdlc" />
-    <EmbeddedResource Include="frms\Relat\Relat\RelatFor.rdlc" />
-    <EmbeddedResource Include="frms\Relat\Relat\RelatPro.rdlc" />
-    <EmbeddedResource Include="frms\Relat\Relat\RelatUsu.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -244,6 +239,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="frms\Relat\Relat\RelatCli.rdlc" />
+    <EmbeddedResource Include="frms\Relat\Relat\RelatExt.rdlc" />
+    <EmbeddedResource Include="frms\Relat\Relat\RelatFor.rdlc" />
+    <EmbeddedResource Include="frms\Relat\Relat\RelatPro.rdlc" />
+    <EmbeddedResource Include="frms\Relat\Relat\RelatUsu.rdlc" />
     <None Include="dbServicoDataSet.xsc">
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
     </None>
@@ -289,5 +289,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

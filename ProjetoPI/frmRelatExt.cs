@@ -19,8 +19,6 @@ namespace ProjetoPI
 
         private void frmRelatExt_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'dbServicoDataSet.Pedido_nota'. Você pode movê-la ou removê-la conforme necessário.
-            this.pedido_notaTableAdapter.Fill(this.dbServicoDataSet.Pedido_nota);
 
             this.reportViewer1.RefreshReport();
         }
