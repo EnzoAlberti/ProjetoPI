@@ -40,7 +40,7 @@ namespace ProjetoPI
             {
                 if (cbmFiltrar.Text == "Código")
                 {
-                    string sql = "select * from Fornecedor where cod_cli = " + txtPesquisar.Text + "";
+                    string sql = "select * from Fornecedor where cod_for = " + txtPesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     cn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -51,7 +51,7 @@ namespace ProjetoPI
                 }
                 if (cbmFiltrar.Text == "Nome")
                 {
-                    string sql = "select * from Fornecedor where nome like '%" + txtPesquisar.Text + "%'";
+                    string sql = "select * from Fornecedor where nome_fant like '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable forn = new DataTable();

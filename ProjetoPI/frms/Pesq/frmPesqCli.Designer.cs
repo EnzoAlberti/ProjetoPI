@@ -264,6 +264,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqCli";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Cliente";
             this.Load += new System.EventHandler(this.frmPesqCli_Load);
             this.groupBox1.ResumeLayout(false);

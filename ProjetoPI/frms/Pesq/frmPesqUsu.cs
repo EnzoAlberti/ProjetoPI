@@ -40,7 +40,7 @@ namespace ProjetoPI
             {
                 if (cbmFiltrar.Text == "Código")
                 {
-                    string sql = "select * from Usuario where cod_cli = " + txtPesquisar.Text + "";
+                    string sql = "select * from Usuario where cod_usu = " + txtPesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     cn.Open();
                     cmd.CommandType = CommandType.Text;

@@ -241,6 +241,7 @@
             this.Controls.Add(this.fornecedorDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqFor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa de Fornecedor";
             this.Load += new System.EventHandler(this.frmPesqFor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();

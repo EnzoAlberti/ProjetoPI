@@ -195,6 +195,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqExt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisa de Extrato";
             this.Load += new System.EventHandler(this.frmPesqExt_Load);
             this.groupBox1.ResumeLayout(false);
