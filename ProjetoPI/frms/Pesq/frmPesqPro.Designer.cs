@@ -142,6 +142,8 @@
             // 
             // produtoDataGridView
             // 
+            this.produtoDataGridView.AllowUserToAddRows = false;
+            this.produtoDataGridView.AllowUserToDeleteRows = false;
             this.produtoDataGridView.AutoGenerateColumns = false;
             this.produtoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.produtoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -155,6 +157,7 @@
             this.produtoDataGridView.DataSource = this.produtoBindingSource;
             this.produtoDataGridView.Location = new System.Drawing.Point(0, 45);
             this.produtoDataGridView.Name = "produtoDataGridView";
+            this.produtoDataGridView.ReadOnly = true;
             this.produtoDataGridView.Size = new System.Drawing.Size(742, 342);
             this.produtoDataGridView.TabIndex = 2;
             // 
@@ -163,36 +166,42 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_pro";
             this.dataGridViewTextBoxColumn1.HeaderText = "cod_pro";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
             this.dataGridViewTextBoxColumn2.HeaderText = "nome";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "tamanho";
             this.dataGridViewTextBoxColumn3.HeaderText = "tamanho";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "cor";
             this.dataGridViewTextBoxColumn4.HeaderText = "cor";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "preco";
             this.dataGridViewTextBoxColumn5.HeaderText = "preco";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "marca";
             this.dataGridViewTextBoxColumn6.HeaderText = "marca";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 

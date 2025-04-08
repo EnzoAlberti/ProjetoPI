@@ -84,6 +84,8 @@
             // 
             // fornecedorDataGridView
             // 
+            this.fornecedorDataGridView.AllowUserToAddRows = false;
+            this.fornecedorDataGridView.AllowUserToDeleteRows = false;
             this.fornecedorDataGridView.AutoGenerateColumns = false;
             this.fornecedorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.fornecedorDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -101,6 +103,7 @@
             this.fornecedorDataGridView.DataSource = this.fornecedorBindingSource;
             this.fornecedorDataGridView.Location = new System.Drawing.Point(0, 50);
             this.fornecedorDataGridView.Name = "fornecedorDataGridView";
+            this.fornecedorDataGridView.ReadOnly = true;
             this.fornecedorDataGridView.Size = new System.Drawing.Size(1138, 397);
             this.fornecedorDataGridView.TabIndex = 1;
             // 
@@ -109,60 +112,70 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_for";
             this.dataGridViewTextBoxColumn1.HeaderText = "cod_for";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_fant";
             this.dataGridViewTextBoxColumn2.HeaderText = "nome_fant";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "cnpj";
             this.dataGridViewTextBoxColumn3.HeaderText = "cnpj";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
             this.dataGridViewTextBoxColumn4.HeaderText = "email";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "telefone";
             this.dataGridViewTextBoxColumn5.HeaderText = "telefone";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "rua";
             this.dataGridViewTextBoxColumn6.HeaderText = "rua";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "bairro";
             this.dataGridViewTextBoxColumn7.HeaderText = "bairro";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "cidade";
             this.dataGridViewTextBoxColumn8.HeaderText = "cidade";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "uf";
             this.dataGridViewTextBoxColumn9.HeaderText = "uf";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "cep";
             this.dataGridViewTextBoxColumn10.HeaderText = "cep";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn11
             // 

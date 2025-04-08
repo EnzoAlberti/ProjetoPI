@@ -48,12 +48,18 @@
             this.produtoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedorToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.extratoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ediçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fornecedorToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imagemDeFundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbUsuario = new System.Windows.Forms.ToolStripButton();
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
             this.tsbProduto = new System.Windows.Forms.ToolStripButton();
+            this.tsbSobre = new System.Windows.Forms.ToolStripButton();
             this.tsbLogoff = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
@@ -72,6 +78,7 @@
             this.cadastroToolStripMenuItem,
             this.consultasToolStripMenuItem,
             this.relatóriosToolStripMenuItem,
+            this.ediçõesToolStripMenuItem,
             this.configuraçõesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -212,6 +219,42 @@
             this.extratoToolStripMenuItem1.Text = "Extrato";
             this.extratoToolStripMenuItem1.Click += new System.EventHandler(this.extratoToolStripMenuItem1_Click);
             // 
+            // ediçõesToolStripMenuItem
+            // 
+            this.ediçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuárioToolStripMenuItem3,
+            this.clienteToolStripMenuItem3,
+            this.produtoToolStripMenuItem3,
+            this.fornecedorToolStripMenuItem3});
+            this.ediçõesToolStripMenuItem.Name = "ediçõesToolStripMenuItem";
+            this.ediçõesToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.ediçõesToolStripMenuItem.Text = "Alterações";
+            // 
+            // usuárioToolStripMenuItem3
+            // 
+            this.usuárioToolStripMenuItem3.Name = "usuárioToolStripMenuItem3";
+            this.usuárioToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
+            this.usuárioToolStripMenuItem3.Text = "Usuário";
+            // 
+            // clienteToolStripMenuItem3
+            // 
+            this.clienteToolStripMenuItem3.Name = "clienteToolStripMenuItem3";
+            this.clienteToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
+            this.clienteToolStripMenuItem3.Text = "Cliente";
+            this.clienteToolStripMenuItem3.Click += new System.EventHandler(this.clienteToolStripMenuItem3_Click);
+            // 
+            // produtoToolStripMenuItem3
+            // 
+            this.produtoToolStripMenuItem3.Name = "produtoToolStripMenuItem3";
+            this.produtoToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
+            this.produtoToolStripMenuItem3.Text = "Produto";
+            // 
+            // fornecedorToolStripMenuItem3
+            // 
+            this.fornecedorToolStripMenuItem3.Name = "fornecedorToolStripMenuItem3";
+            this.fornecedorToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
+            this.fornecedorToolStripMenuItem3.Text = "Fornecedor";
+            // 
             // configuraçõesToolStripMenuItem
             // 
             this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -233,6 +276,7 @@
             this.tsbUsuario,
             this.tsbCliente,
             this.tsbProduto,
+            this.tsbSobre,
             this.tsbLogoff});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
@@ -269,6 +313,16 @@
             this.tsbProduto.Text = "Produto";
             this.tsbProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbProduto.Click += new System.EventHandler(this.tsbProduto_Click);
+            // 
+            // tsbSobre
+            // 
+            this.tsbSobre.Image = ((System.Drawing.Image)(resources.GetObject("tsbSobre.Image")));
+            this.tsbSobre.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSobre.Name = "tsbSobre";
+            this.tsbSobre.Size = new System.Drawing.Size(41, 35);
+            this.tsbSobre.Text = "Sobre";
+            this.tsbSobre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbSobre.Click += new System.EventHandler(this.tsbSobre_Click);
             // 
             // tsbLogoff
             // 
@@ -389,5 +443,11 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imagemDeFundoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tsbSobre;
+        private System.Windows.Forms.ToolStripMenuItem ediçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem3;
     }
 }

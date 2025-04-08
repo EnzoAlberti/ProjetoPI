@@ -73,6 +73,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frms\Edit\frmEditCli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Edit\frmEditCli.Designer.cs">
+      <DependentUpon>frmEditCli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Edit\frmEditFor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Edit\frmEditFor.Designer.cs">
+      <DependentUpon>frmEditFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Edit\frmEditPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Edit\frmEditPro.Designer.cs">
+      <DependentUpon>frmEditPro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Edit\frmEditUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Edit\frmEditUsu.Designer.cs">
+      <DependentUpon>frmEditUsu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frms\frmConfigBackground.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,9 +205,13 @@
     <Compile Include="frms\frmTelaPrincipal.Designer.cs">
       <DependentUpon>frmTelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogSistema.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frms\Edit\frmEditCli.resx">
+      <DependentUpon>frmEditCli.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frms\frmConfigBackground.resx">
       <DependentUpon>frmConfigBackground.cs</DependentUpon>
     </EmbeddedResource>

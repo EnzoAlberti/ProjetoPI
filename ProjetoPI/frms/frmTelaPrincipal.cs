@@ -406,6 +406,32 @@ namespace ProjetoPI
                 MessageBox.Show("Não foi possível se conectar com o formulário devido ao erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        public void exibefrmEditCli()
+        {
+            try
+            {
+                frmGerCli editCli = null;
+                foreach (Form frm in this.MdiChildren)
+                {
+                    if (frm is frmGerCli)
+                    {
+                        editCli = (frmGerCli)frm;
+                        break;
+                    }
+                }
+                if (editCli == null)
+                {
+                    editCli = new frmGerCli();
+                    editCli.MdiParent = this;
+                    editCli.Show();
+                }
+                editCli.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível se conectar com o formulário devido ao erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
             tsslUsuario.Text = "Usuário: " + frmLogin.usuarioConectado;
@@ -544,6 +570,16 @@ namespace ProjetoPI
         {
             frmConfigBackground ConfigForm = new frmConfigBackground();
             ConfigForm.ShowDialog();
+        }
+
+        private void tsbSobre_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sistema de Gerenciamento de Vendas\nVersão 2.0", "Sobre");
+        }
+
+        private void clienteToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            exibefrmEditCli();
         }
     }
 }

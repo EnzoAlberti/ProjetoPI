@@ -60,7 +60,7 @@ namespace ProjetoPI
         {
             try
             {
-                if((emailComboBox.Text != "")&&(senhaTextBox.Text != ""))
+                if ((emailComboBox.Text != "") && (senhaTextBox.Text != ""))
                 {
                     SqlCommand comm = new SqlCommand("select * from Usuario where email = @usuario and " + "senha = @senha", conn);
                     comm.Parameters.Add("@Usuario", SqlDbType.VarChar).Value = emailComboBox.Text;
@@ -78,7 +78,7 @@ namespace ProjetoPI
                     }
                     else
                     {
-                        MessageBox.Show("Usuário e/ou senha incorretas","Aviso de segurança",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Usuário e/ou senha incorretas", "Aviso de segurança", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         senhaTextBox.Text = "";
                     }
                 }
@@ -86,9 +86,6 @@ namespace ProjetoPI
                 {
                     MessageBox.Show("Todos os campos são obrigatórios", "Aviso de segurança", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-
-
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -106,7 +103,6 @@ namespace ProjetoPI
         {
             public static int CodUsuLog { get; set; }
         }
-
         private void senhaTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
