@@ -14,24 +14,25 @@ namespace ProjetoPI
     public partial class frmPesqPro : Form
     {
         Conection cn = new Conection();
+        DataGridView produtoDataGridView; // Declare the missing DataGridView
+
         public frmPesqPro()
         {
             InitializeComponent();
-        }
 
-        private void produtoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.produtoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dbServicoDataSet);
-
+            // Initialize the DataGridView
+            produtoDataGridView = new DataGridView
+            {
+                Location = new Point(10, 100), // Adjust location as needed
+                Size = new Size(500, 300)     // Adjust size as needed
+            };
+            this.Controls.Add(produtoDataGridView); // Add it to the form
         }
 
         private void frmPesqPro_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'dbServicoDataSet.Produto'. Você pode movê-la ou removê-la conforme necessário.
             this.produtoTableAdapter.Fill(this.dbServicoDataSet.Produto);
-
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -47,25 +48,34 @@ namespace ProjetoPI
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();
                     da.Fill(produto);
-                    produtoDataGridView.DataSource = produto;
+                    dgvproduto.DataSource = produto;
                 }
-                if (cbmFiltrar.Text == "Marca")
-                {
-                    string sql = "select * from Produto where marca like '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cn.Connection);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable produto = new DataTable();
-                    da.Fill(produto);
-                    produtoDataGridView.DataSource = produto;
-                }
-                if(cbmFiltrar.Text == "Nome")
+                if (cbmFiltrar.Text == "Nome")
                 {
                     string sql = "select * from Produto where nome like '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();
                     da.Fill(produto);
-                    produtoDataGridView.DataSource = produto;
+                    dgvproduto.DataSource = produto;
+                }
+                if (cbmFiltrar.Text == "Tipo")
+                {
+                    string sql = "select * from Produto where Tipo like '%" + txtPesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cn.Connection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable produto = new DataTable();
+                    da.Fill(produto);
+                    dgvproduto.DataSource = produto;
+                }
+                if (cbmFiltrar.Text == "Tamanho")
+                {
+                    string sql = "select * from Produto where Tamanho like '%" + txtPesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cn.Connection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable produto = new DataTable();
+                    da.Fill(produto);
+                    dgvproduto.DataSource = produto;
                 }
             }
             catch (Exception ex)

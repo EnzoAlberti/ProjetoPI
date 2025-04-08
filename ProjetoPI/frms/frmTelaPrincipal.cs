@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -432,6 +433,110 @@ namespace ProjetoPI
                 MessageBox.Show("Não foi possível se conectar com o formulário devido ao erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        public void exibefrmEditUsu()
+        {
+            try
+            {
+                frmEditUsu editUsu = null;
+                foreach (Form frm in this.MdiChildren)
+                {
+                    if (frm is frmEditUsu)
+                    {
+                        editUsu = (frmEditUsu)frm;
+                        break;
+                    }
+                }
+                if (editUsu == null)
+                {
+                    editUsu = new frmEditUsu();
+                    editUsu.MdiParent = this;
+                    editUsu.Show();
+                }
+                editUsu.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível se conectar com o formulário devido ao erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void exibefrmEditPro()
+        {
+            try
+            {
+                frmEditPro editPro = null;
+                foreach (Form frm in this.MdiChildren)
+                {
+                    if (frm is frmEditPro)
+                    {
+                        editPro = (frmEditPro)frm;
+                        break;
+                    }
+                }
+                if (editPro == null)
+                {
+                    editPro = new frmEditPro();
+                    editPro.MdiParent = this;
+                    editPro.Show();
+                }
+                editPro.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível se conectar com o formulário devido ao erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void exibefrmEditFor()
+        {
+            try
+            {
+                frmEditFor editFor = null;
+                foreach (Form frm in this.MdiChildren)
+                {
+                    if (frm is frmEditFor)
+                    {
+                        editFor = (frmEditFor)frm;
+                        break;
+                    }
+                }
+                if (editFor == null)
+                {
+                    editFor = new frmEditFor();
+                    editFor.MdiParent = this;
+                    editFor.Show();
+                }
+                editFor.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível se conectar com o formulário devido ao erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void exibefrmEmissao()
+        {
+            try
+            {
+                frmEmissao emissao = null;
+                foreach (Form frm in this.MdiChildren)
+                {
+                    if (frm is frmEmissao)
+                    {
+                        emissao = (frmEmissao)frm;
+                        break;
+                    }
+                }
+                if (emissao == null)
+                {
+                    emissao = new frmEmissao();
+                    emissao.MdiParent = this;
+                    emissao.Show();
+                }
+                emissao.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível se conectar com o formulário devido ao erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
         private void frmTelaPrincipal_Load(object sender, EventArgs e)
         {
             tsslUsuario.Text = "Usuário: " + frmLogin.usuarioConectado;
@@ -574,12 +679,33 @@ namespace ProjetoPI
 
         private void tsbSobre_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sistema de Gerenciamento de Vendas\nVersão 2.0", "Sobre");
+            string caminhoLog = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs.txt");
+            MessageBox.Show($"Sistema de Gerenciamento de Vendas\nVersão 2.0\nCaminho de logs: {caminhoLog}", "Sobre");
         }
 
         private void clienteToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             exibefrmEditCli();
+        }
+
+        private void usuárioToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            exibefrmEditUsu();
+        }
+
+        private void produtoToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            exibefrmEditPro();
+        }
+
+        private void fornecedorToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            exibefrmEditFor();
+        }
+
+        private void tsbEmissao_Click(object sender, EventArgs e)
+        {
+            exibefrmEmissao();
         }
     }
 }

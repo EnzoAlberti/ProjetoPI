@@ -36,9 +36,10 @@
             System.Windows.Forms.Label precoLabel;
             System.Windows.Forms.Label marcaLabel;
             System.Windows.Forms.Label cod_usuLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadPro));
             System.Windows.Forms.Label statusLabel;
             System.Windows.Forms.Label quantidadeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadPro));
+            System.Windows.Forms.Label tipoLabel;
             this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produtoTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ProdutoTableAdapter();
@@ -65,6 +66,7 @@
             this.cod_usuTextBox = new System.Windows.Forms.TextBox();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.quantidadeTextBox = new System.Windows.Forms.TextBox();
+            this.tipoTextBox = new System.Windows.Forms.TextBox();
             cod_proLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             tamanhoLabel = new System.Windows.Forms.Label();
@@ -74,6 +76,7 @@
             cod_usuLabel = new System.Windows.Forms.Label();
             statusLabel = new System.Windows.Forms.Label();
             quantidadeLabel = new System.Windows.Forms.Label();
+            tipoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingNavigator)).BeginInit();
@@ -110,7 +113,7 @@
             // corLabel
             // 
             corLabel.AutoSize = true;
-            corLabel.Location = new System.Drawing.Point(5, 125);
+            corLabel.Location = new System.Drawing.Point(5, 152);
             corLabel.Name = "corLabel";
             corLabel.Size = new System.Drawing.Size(26, 13);
             corLabel.TabIndex = 7;
@@ -119,7 +122,7 @@
             // precoLabel
             // 
             precoLabel.AutoSize = true;
-            precoLabel.Location = new System.Drawing.Point(5, 151);
+            precoLabel.Location = new System.Drawing.Point(5, 178);
             precoLabel.Name = "precoLabel";
             precoLabel.Size = new System.Drawing.Size(38, 13);
             precoLabel.TabIndex = 9;
@@ -128,7 +131,7 @@
             // marcaLabel
             // 
             marcaLabel.AutoSize = true;
-            marcaLabel.Location = new System.Drawing.Point(5, 177);
+            marcaLabel.Location = new System.Drawing.Point(5, 204);
             marcaLabel.Name = "marcaLabel";
             marcaLabel.Size = new System.Drawing.Size(40, 13);
             marcaLabel.TabIndex = 11;
@@ -137,11 +140,29 @@
             // cod_usuLabel
             // 
             cod_usuLabel.AutoSize = true;
-            cod_usuLabel.Location = new System.Drawing.Point(5, 256);
+            cod_usuLabel.Location = new System.Drawing.Point(5, 283);
             cod_usuLabel.Name = "cod_usuLabel";
             cod_usuLabel.Size = new System.Drawing.Size(46, 13);
             cod_usuLabel.TabIndex = 13;
             cod_usuLabel.Text = "Usuário:";
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new System.Drawing.Point(7, 256);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(40, 13);
+            statusLabel.TabIndex = 15;
+            statusLabel.Text = "Status:";
+            // 
+            // quantidadeLabel
+            // 
+            quantidadeLabel.AutoSize = true;
+            quantidadeLabel.Location = new System.Drawing.Point(5, 230);
+            quantidadeLabel.Name = "quantidadeLabel";
+            quantidadeLabel.Size = new System.Drawing.Size(65, 13);
+            quantidadeLabel.TabIndex = 17;
+            quantidadeLabel.Text = "Quantidade:";
             // 
             // dbServicoDataSet
             // 
@@ -251,6 +272,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -329,7 +351,7 @@
             // corTextBox
             // 
             this.corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "cor", true));
-            this.corTextBox.Location = new System.Drawing.Point(62, 122);
+            this.corTextBox.Location = new System.Drawing.Point(62, 149);
             this.corTextBox.Name = "corTextBox";
             this.corTextBox.Size = new System.Drawing.Size(121, 20);
             this.corTextBox.TabIndex = 8;
@@ -337,7 +359,7 @@
             // precoTextBox
             // 
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "preco", true));
-            this.precoTextBox.Location = new System.Drawing.Point(62, 148);
+            this.precoTextBox.Location = new System.Drawing.Point(62, 175);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.Size = new System.Drawing.Size(121, 20);
             this.precoTextBox.TabIndex = 10;
@@ -345,7 +367,7 @@
             // marcaTextBox
             // 
             this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "marca", true));
-            this.marcaTextBox.Location = new System.Drawing.Point(62, 174);
+            this.marcaTextBox.Location = new System.Drawing.Point(62, 201);
             this.marcaTextBox.Name = "marcaTextBox";
             this.marcaTextBox.Size = new System.Drawing.Size(121, 20);
             this.marcaTextBox.TabIndex = 12;
@@ -354,19 +376,10 @@
             // 
             this.cod_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "cod_usu", true));
             this.cod_usuTextBox.Enabled = false;
-            this.cod_usuTextBox.Location = new System.Drawing.Point(62, 253);
+            this.cod_usuTextBox.Location = new System.Drawing.Point(62, 280);
             this.cod_usuTextBox.Name = "cod_usuTextBox";
             this.cod_usuTextBox.Size = new System.Drawing.Size(121, 20);
             this.cod_usuTextBox.TabIndex = 14;
-            // 
-            // statusLabel
-            // 
-            statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(7, 229);
-            statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(40, 13);
-            statusLabel.TabIndex = 15;
-            statusLabel.Text = "Status:";
             // 
             // statusComboBox
             // 
@@ -375,33 +388,43 @@
             this.statusComboBox.Items.AddRange(new object[] {
             "Ativo",
             "Inativo"});
-            this.statusComboBox.Location = new System.Drawing.Point(62, 226);
+            this.statusComboBox.Location = new System.Drawing.Point(62, 253);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(121, 21);
             this.statusComboBox.TabIndex = 16;
             // 
-            // quantidadeLabel
-            // 
-            quantidadeLabel.AutoSize = true;
-            quantidadeLabel.Location = new System.Drawing.Point(5, 203);
-            quantidadeLabel.Name = "quantidadeLabel";
-            quantidadeLabel.Size = new System.Drawing.Size(65, 13);
-            quantidadeLabel.TabIndex = 17;
-            quantidadeLabel.Text = "Quantidade:";
-            // 
             // quantidadeTextBox
             // 
             this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "quantidade", true));
-            this.quantidadeTextBox.Location = new System.Drawing.Point(76, 200);
+            this.quantidadeTextBox.Location = new System.Drawing.Point(76, 227);
             this.quantidadeTextBox.Name = "quantidadeTextBox";
             this.quantidadeTextBox.Size = new System.Drawing.Size(107, 20);
             this.quantidadeTextBox.TabIndex = 18;
+            // 
+            // tipoLabel
+            // 
+            tipoLabel.AutoSize = true;
+            tipoLabel.Location = new System.Drawing.Point(5, 126);
+            tipoLabel.Name = "tipoLabel";
+            tipoLabel.Size = new System.Drawing.Size(31, 13);
+            tipoLabel.TabIndex = 19;
+            tipoLabel.Text = "Tipo:";
+            // 
+            // tipoTextBox
+            // 
+            this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "Tipo", true));
+            this.tipoTextBox.Location = new System.Drawing.Point(62, 123);
+            this.tipoTextBox.Name = "tipoTextBox";
+            this.tipoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.tipoTextBox.TabIndex = 20;
             // 
             // frmCadPro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 310);
+            this.ClientSize = new System.Drawing.Size(485, 320);
+            this.Controls.Add(tipoLabel);
+            this.Controls.Add(this.tipoTextBox);
             this.Controls.Add(quantidadeLabel);
             this.Controls.Add(this.quantidadeTextBox);
             this.Controls.Add(statusLabel);
@@ -462,5 +485,6 @@
         private System.Windows.Forms.TextBox cod_usuTextBox;
         private System.Windows.Forms.ComboBox statusComboBox;
         private System.Windows.Forms.TextBox quantidadeTextBox;
+        private System.Windows.Forms.TextBox tipoTextBox;
     }
 }

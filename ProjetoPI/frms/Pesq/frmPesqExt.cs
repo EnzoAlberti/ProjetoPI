@@ -38,7 +38,7 @@ namespace ProjetoPI
         {
             try
             {
-                if (cbmFiltrar.Text == "Código")
+                if (cbmFiltrar.Text == "Código Nota")
                 {
                     string sql = "select * from Pedido_nota where cod_ped = " + txtPesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
@@ -60,7 +60,7 @@ namespace ProjetoPI
                 }
                 if(cbmFiltrar.Text == "Código Usuário")
                 {
-                    string sql = "select * from Pedido where cod_usu like '%" + txtPesquisar.Text + "%'";
+                    string sql = "select * from Pedido_nota where cod_usu like '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cn.Connection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable ped = new DataTable();

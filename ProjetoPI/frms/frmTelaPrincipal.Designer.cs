@@ -60,6 +60,7 @@
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
             this.tsbProduto = new System.Windows.Forms.ToolStripButton();
             this.tsbSobre = new System.Windows.Forms.ToolStripButton();
+            this.tsbEmissao = new System.Windows.Forms.ToolStripButton();
             this.tsbLogoff = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
@@ -235,6 +236,7 @@
             this.usuárioToolStripMenuItem3.Name = "usuárioToolStripMenuItem3";
             this.usuárioToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
             this.usuárioToolStripMenuItem3.Text = "Usuário";
+            this.usuárioToolStripMenuItem3.Click += new System.EventHandler(this.usuárioToolStripMenuItem3_Click);
             // 
             // clienteToolStripMenuItem3
             // 
@@ -248,12 +250,14 @@
             this.produtoToolStripMenuItem3.Name = "produtoToolStripMenuItem3";
             this.produtoToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
             this.produtoToolStripMenuItem3.Text = "Produto";
+            this.produtoToolStripMenuItem3.Click += new System.EventHandler(this.produtoToolStripMenuItem3_Click);
             // 
             // fornecedorToolStripMenuItem3
             // 
             this.fornecedorToolStripMenuItem3.Name = "fornecedorToolStripMenuItem3";
             this.fornecedorToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
             this.fornecedorToolStripMenuItem3.Text = "Fornecedor";
+            this.fornecedorToolStripMenuItem3.Click += new System.EventHandler(this.fornecedorToolStripMenuItem3_Click);
             // 
             // configuraçõesToolStripMenuItem
             // 
@@ -266,7 +270,7 @@
             // imagemDeFundoToolStripMenuItem
             // 
             this.imagemDeFundoToolStripMenuItem.Name = "imagemDeFundoToolStripMenuItem";
-            this.imagemDeFundoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imagemDeFundoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.imagemDeFundoToolStripMenuItem.Text = "Imagem de fundo";
             this.imagemDeFundoToolStripMenuItem.Click += new System.EventHandler(this.imagemDeFundoToolStripMenuItem_Click);
             // 
@@ -276,6 +280,7 @@
             this.tsbUsuario,
             this.tsbCliente,
             this.tsbProduto,
+            this.tsbEmissao,
             this.tsbSobre,
             this.tsbLogoff});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
@@ -323,6 +328,16 @@
             this.tsbSobre.Text = "Sobre";
             this.tsbSobre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbSobre.Click += new System.EventHandler(this.tsbSobre_Click);
+            // 
+            // tsbEmissao
+            // 
+            this.tsbEmissao.Image = ((System.Drawing.Image)(resources.GetObject("tsbEmissao.Image")));
+            this.tsbEmissao.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEmissao.Name = "tsbEmissao";
+            this.tsbEmissao.Size = new System.Drawing.Size(54, 35);
+            this.tsbEmissao.Text = "Emissao";
+            this.tsbEmissao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbEmissao.Click += new System.EventHandler(this.tsbEmissao_Click);
             // 
             // tsbLogoff
             // 
@@ -449,5 +464,6 @@
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripButton tsbEmissao;
     }
 }

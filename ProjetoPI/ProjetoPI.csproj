@@ -73,6 +73,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbServicoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frms\frmEmissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\frmEmissao.Designer.cs">
+      <DependentUpon>frmEmissao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frms\Pesq\frmPesqPro.Designer.cs">
+      <DependentUpon>frmPesqPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frms\Edit\frmEditCli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,12 +169,6 @@
     <Compile Include="frms\Pesq\frmPesqFor.Designer.cs">
       <DependentUpon>frmPesqFor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frms\Pesq\frmPesqPro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frms\Pesq\frmPesqPro.Designer.cs">
-      <DependentUpon>frmPesqPro.cs</DependentUpon>
-    </Compile>
     <Compile Include="frms\Pesq\frmPesqUsu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,8 +215,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frms\frmEmissao.resx">
+      <DependentUpon>frmEmissao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\Pesq\frmPesqPro.resx">
+      <DependentUpon>frmPesqPro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frms\Edit\frmEditCli.resx">
       <DependentUpon>frmEditCli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\Edit\frmEditFor.resx">
+      <DependentUpon>frmEditFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\Edit\frmEditPro.resx">
+      <DependentUpon>frmEditPro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frms\Edit\frmEditUsu.resx">
+      <DependentUpon>frmEditUsu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frms\frmConfigBackground.resx">
       <DependentUpon>frmConfigBackground.cs</DependentUpon>
@@ -259,9 +280,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frms\Pesq\frmPesqFor.resx">
       <DependentUpon>frmPesqFor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frms\Pesq\frmPesqPro.resx">
-      <DependentUpon>frmPesqPro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frms\Pesq\frmPesqUsu.resx">
       <DependentUpon>frmPesqUsu.cs</DependentUpon>

@@ -139,11 +139,6 @@ namespace ProjetoPI
                 await BuscarCEP();
             }
         }
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
-            cod_usuTextBox.Text = frmLogin.SessaoUsuario.CodUsuLog.ToString();
-        }
     }
 }
 

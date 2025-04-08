@@ -48,7 +48,6 @@
             this.clienteTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ClienteTableAdapter();
             this.tableAdapterManager = new ProjetoPI.dbServicoDataSetTableAdapters.TableAdapterManager();
             this.clienteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -237,7 +236,7 @@
             // 
             // clienteBindingNavigator
             // 
-            this.clienteBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.clienteBindingNavigator.AddNewItem = null;
             this.clienteBindingNavigator.BindingSource = this.clienteBindingSource;
             this.clienteBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.clienteBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -251,7 +250,6 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.clienteBindingNavigatorSaveItem});
             this.clienteBindingNavigator.Location = new System.Drawing.Point(0, 0);
@@ -264,15 +262,6 @@
             this.clienteBindingNavigator.Size = new System.Drawing.Size(451, 25);
             this.clienteBindingNavigator.TabIndex = 0;
             this.clienteBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
             // 
             // bindingNavigatorCountItem
             // 
@@ -478,7 +467,7 @@
             this.tipo_docComboBox.Size = new System.Drawing.Size(200, 21);
             this.tipo_docComboBox.TabIndex = 26;
             // 
-            // frmEditCli
+            // frmGerCli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -510,7 +499,8 @@
             this.Controls.Add(this.docTextBox);
             this.Controls.Add(this.tipo_docComboBox);
             this.Controls.Add(this.clienteBindingNavigator);
-            this.Name = "frmEditCli";
+            this.Name = "frmGerCli";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGerCli";
             this.Load += new System.EventHandler(this.frmGerCli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
@@ -530,7 +520,6 @@
         private dbServicoDataSetTableAdapters.ClienteTableAdapter clienteTableAdapter;
         private dbServicoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator clienteBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;

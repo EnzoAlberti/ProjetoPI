@@ -79,7 +79,7 @@
             this.cbmFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmFiltrar.FormattingEnabled = true;
             this.cbmFiltrar.Items.AddRange(new object[] {
-            "Código",
+            "Código Nota",
             "Código Cliente",
             "Código Usuário"});
             this.cbmFiltrar.Location = new System.Drawing.Point(66, 17);
@@ -140,6 +140,8 @@
             // 
             // pedido_notaDataGridView
             // 
+            this.pedido_notaDataGridView.AllowUserToAddRows = false;
+            this.pedido_notaDataGridView.AllowUserToDeleteRows = false;
             this.pedido_notaDataGridView.AutoGenerateColumns = false;
             this.pedido_notaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pedido_notaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -151,7 +153,8 @@
             this.pedido_notaDataGridView.DataSource = this.pedido_notaBindingSource;
             this.pedido_notaDataGridView.Location = new System.Drawing.Point(1, 45);
             this.pedido_notaDataGridView.Name = "pedido_notaDataGridView";
-            this.pedido_notaDataGridView.Size = new System.Drawing.Size(797, 405);
+            this.pedido_notaDataGridView.ReadOnly = true;
+            this.pedido_notaDataGridView.Size = new System.Drawing.Size(542, 405);
             this.pedido_notaDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -166,6 +169,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "cod_usu";
             this.dataGridViewTextBoxColumn2.HeaderText = "cod_usu";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -179,12 +183,14 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "data";
             this.dataGridViewTextBoxColumn4.HeaderText = "data";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "valor";
             this.dataGridViewTextBoxColumn5.HeaderText = "valor";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // frmPesqExt
             // 

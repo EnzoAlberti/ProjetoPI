@@ -35,22 +35,24 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
+            this.dgvproduto = new System.Windows.Forms.DataGridView();
+            this.codproDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tamanhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.corDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codusuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.produtoTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ProdutoTableAdapter();
-            this.tableAdapterManager = new ProjetoPI.dbServicoDataSetTableAdapters.TableAdapterManager();
-            this.produtoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvproduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -62,7 +64,7 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(742, 50);
+            this.groupBox1.Size = new System.Drawing.Size(1042, 50);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -82,8 +84,9 @@
             this.cbmFiltrar.FormattingEnabled = true;
             this.cbmFiltrar.Items.AddRange(new object[] {
             "Código",
-            "Marca",
-            "Nome"});
+            "Nome",
+            "Tipo",
+            "Tamanho"});
             this.cbmFiltrar.Location = new System.Drawing.Point(66, 17);
             this.cbmFiltrar.Name = "cbmFiltrar";
             this.cbmFiltrar.Size = new System.Drawing.Size(80, 21);
@@ -115,118 +118,130 @@
             this.txtPesquisar.Size = new System.Drawing.Size(91, 20);
             this.txtPesquisar.TabIndex = 0;
             // 
-            // dbServicoDataSet
+            // dgvproduto
             // 
-            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
-            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dgvproduto.AllowUserToAddRows = false;
+            this.dgvproduto.AllowUserToDeleteRows = false;
+            this.dgvproduto.AutoGenerateColumns = false;
+            this.dgvproduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvproduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codproDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.tamanhoDataGridViewTextBoxColumn,
+            this.corDataGridViewTextBoxColumn,
+            this.precoDataGridViewTextBoxColumn,
+            this.marcaDataGridViewTextBoxColumn,
+            this.codusuDataGridViewTextBoxColumn,
+            this.quantidadeDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.tipoDataGridViewTextBoxColumn});
+            this.dgvproduto.DataSource = this.produtoBindingSource;
+            this.dgvproduto.Location = new System.Drawing.Point(0, 44);
+            this.dgvproduto.Name = "dgvproduto";
+            this.dgvproduto.ReadOnly = true;
+            this.dgvproduto.Size = new System.Drawing.Size(1042, 407);
+            this.dgvproduto.TabIndex = 2;
+            // 
+            // codproDataGridViewTextBoxColumn
+            // 
+            this.codproDataGridViewTextBoxColumn.DataPropertyName = "cod_pro";
+            this.codproDataGridViewTextBoxColumn.HeaderText = "cod_pro";
+            this.codproDataGridViewTextBoxColumn.Name = "codproDataGridViewTextBoxColumn";
+            this.codproDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tamanhoDataGridViewTextBoxColumn
+            // 
+            this.tamanhoDataGridViewTextBoxColumn.DataPropertyName = "tamanho";
+            this.tamanhoDataGridViewTextBoxColumn.HeaderText = "tamanho";
+            this.tamanhoDataGridViewTextBoxColumn.Name = "tamanhoDataGridViewTextBoxColumn";
+            this.tamanhoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // corDataGridViewTextBoxColumn
+            // 
+            this.corDataGridViewTextBoxColumn.DataPropertyName = "cor";
+            this.corDataGridViewTextBoxColumn.HeaderText = "cor";
+            this.corDataGridViewTextBoxColumn.Name = "corDataGridViewTextBoxColumn";
+            this.corDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precoDataGridViewTextBoxColumn
+            // 
+            this.precoDataGridViewTextBoxColumn.DataPropertyName = "preco";
+            this.precoDataGridViewTextBoxColumn.HeaderText = "preco";
+            this.precoDataGridViewTextBoxColumn.Name = "precoDataGridViewTextBoxColumn";
+            this.precoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codusuDataGridViewTextBoxColumn
+            // 
+            this.codusuDataGridViewTextBoxColumn.DataPropertyName = "cod_usu";
+            this.codusuDataGridViewTextBoxColumn.HeaderText = "cod_usu";
+            this.codusuDataGridViewTextBoxColumn.Name = "codusuDataGridViewTextBoxColumn";
+            this.codusuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // produtoBindingSource
             // 
             this.produtoBindingSource.DataMember = "Produto";
             this.produtoBindingSource.DataSource = this.dbServicoDataSet;
             // 
+            // dbServicoDataSet
+            // 
+            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
+            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // produtoTableAdapter
             // 
             this.produtoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ClienteTableAdapter = null;
-            this.tableAdapterManager.FornecedorTableAdapter = null;
-            this.tableAdapterManager.PagamentoTableAdapter = null;
-            this.tableAdapterManager.Pedido_notaTableAdapter = null;
-            this.tableAdapterManager.ProdutoTableAdapter = this.produtoTableAdapter;
-            this.tableAdapterManager.UpdateOrder = ProjetoPI.dbServicoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UsuarioTableAdapter = null;
-            // 
-            // produtoDataGridView
-            // 
-            this.produtoDataGridView.AllowUserToAddRows = false;
-            this.produtoDataGridView.AllowUserToDeleteRows = false;
-            this.produtoDataGridView.AutoGenerateColumns = false;
-            this.produtoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.produtoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.produtoDataGridView.DataSource = this.produtoBindingSource;
-            this.produtoDataGridView.Location = new System.Drawing.Point(0, 45);
-            this.produtoDataGridView.Name = "produtoDataGridView";
-            this.produtoDataGridView.ReadOnly = true;
-            this.produtoDataGridView.Size = new System.Drawing.Size(742, 342);
-            this.produtoDataGridView.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "cod_pro";
-            this.dataGridViewTextBoxColumn1.HeaderText = "cod_pro";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "tamanho";
-            this.dataGridViewTextBoxColumn3.HeaderText = "tamanho";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "cor";
-            this.dataGridViewTextBoxColumn4.HeaderText = "cor";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "preco";
-            this.dataGridViewTextBoxColumn5.HeaderText = "preco";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "marca";
-            this.dataGridViewTextBoxColumn6.HeaderText = "marca";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "cod_usu";
-            this.dataGridViewTextBoxColumn7.HeaderText = "cod_usu";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // frmPesqPro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 385);
-            this.Controls.Add(this.produtoDataGridView);
+            this.ClientSize = new System.Drawing.Size(1042, 451);
+            this.Controls.Add(this.dgvproduto);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPesqPro";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pesquisa de Produto";
+            this.Text = "frmPesqPro";
             this.Load += new System.EventHandler(this.frmPesqPro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvproduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,17 +254,19 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.DataGridView dgvproduto;
         private dbServicoDataSet dbServicoDataSet;
         private System.Windows.Forms.BindingSource produtoBindingSource;
         private dbServicoDataSetTableAdapters.ProdutoTableAdapter produtoTableAdapter;
-        private dbServicoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView produtoDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codproDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tamanhoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn corDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codusuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
     }
 }
