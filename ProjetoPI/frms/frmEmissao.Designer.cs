@@ -42,6 +42,11 @@
             this.lblParcela = new System.Windows.Forms.Label();
             this.cbmParcela = new System.Windows.Forms.ComboBox();
             this.cbmClientes = new System.Windows.Forms.ComboBox();
+            this.cbmProduto = new System.Windows.Forms.ComboBox();
+            this.lblProduto = new System.Windows.Forms.Label();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +87,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(54, 138);
+            this.btnSalvar.Location = new System.Drawing.Point(62, 236);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 1;
@@ -108,7 +113,7 @@
             // 
             this.txtVendedor.Location = new System.Drawing.Point(88, 20);
             this.txtVendedor.Name = "txtVendedor";
-            this.txtVendedor.Size = new System.Drawing.Size(100, 20);
+            this.txtVendedor.Size = new System.Drawing.Size(121, 20);
             this.txtVendedor.TabIndex = 4;
             // 
             // label1
@@ -166,9 +171,57 @@
             this.cbmClientes.Size = new System.Drawing.Size(121, 21);
             this.cbmClientes.TabIndex = 10;
             // 
+            // cbmProduto
+            // 
+            this.cbmProduto.FormattingEnabled = true;
+            this.cbmProduto.Location = new System.Drawing.Point(88, 147);
+            this.cbmProduto.Name = "cbmProduto";
+            this.cbmProduto.Size = new System.Drawing.Size(121, 21);
+            this.cbmProduto.TabIndex = 11;
+            // 
+            // lblProduto
+            // 
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.Location = new System.Drawing.Point(15, 150);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(52, 13);
+            this.lblProduto.TabIndex = 12;
+            this.lblProduto.Text = "Produtos:";
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Location = new System.Drawing.Point(143, 176);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(66, 23);
+            this.btnInserir.TabIndex = 13;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Location = new System.Drawing.Point(15, 181);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(65, 13);
+            this.lblQuantidade.TabIndex = 14;
+            this.lblQuantidade.Text = "Quantidade:";
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Location = new System.Drawing.Point(88, 178);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(49, 20);
+            this.txtQuantidade.TabIndex = 15;
+            // 
             // frmEmissao
             // 
             this.ClientSize = new System.Drawing.Size(672, 439);
+            this.Controls.Add(this.txtQuantidade);
+            this.Controls.Add(this.lblQuantidade);
+            this.Controls.Add(this.btnInserir);
+            this.Controls.Add(this.lblProduto);
+            this.Controls.Add(this.cbmProduto);
             this.Controls.Add(this.cbmClientes);
             this.Controls.Add(this.cbmParcela);
             this.Controls.Add(this.lblParcela);
@@ -226,5 +279,10 @@
         private System.Windows.Forms.Label lblParcela;
         private System.Windows.Forms.ComboBox cbmParcela;
         private System.Windows.Forms.ComboBox cbmClientes;
+        private System.Windows.Forms.ComboBox cbmProduto;
+        private System.Windows.Forms.Label lblProduto;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Label lblQuantidade;
+        private System.Windows.Forms.TextBox txtQuantidade;
     }
 }

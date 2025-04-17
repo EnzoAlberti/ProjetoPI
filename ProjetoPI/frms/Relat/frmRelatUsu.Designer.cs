@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.usuarioTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.UsuarioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.dbServicoDataSet;
+            // 
+            // dbServicoDataSet
+            // 
+            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
+            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dbServicoDataSet
-            // 
-            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
-            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.dbServicoDataSet;
-            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
@@ -71,11 +71,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRelatUsu";
             this.Text = "frmRelatUsu";
             this.Load += new System.EventHandler(this.frmRelatUsu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

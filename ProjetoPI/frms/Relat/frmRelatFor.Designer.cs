@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.fornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.fornecedorTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.FornecedorTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // fornecedorBindingSource
+            // 
+            this.fornecedorBindingSource.DataMember = "Fornecedor";
+            this.fornecedorBindingSource.DataSource = this.dbServicoDataSet;
+            // 
+            // dbServicoDataSet
+            // 
+            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
+            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dbServicoDataSet
-            // 
-            this.dbServicoDataSet.DataSetName = "dbServicoDataSet";
-            this.dbServicoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fornecedorBindingSource
-            // 
-            this.fornecedorBindingSource.DataMember = "Fornecedor";
-            this.fornecedorBindingSource.DataSource = this.dbServicoDataSet;
-            // 
             // fornecedorTableAdapter
             // 
             this.fornecedorTableAdapter.ClearBeforeFill = true;
@@ -71,11 +71,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRelatFor";
             this.Text = "frmRelatFor";
             this.Load += new System.EventHandler(this.frmRelatFor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

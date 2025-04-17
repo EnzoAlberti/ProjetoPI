@@ -22,6 +22,33 @@ namespace ProjetoPI
             lblParcela.Visible = false;
             cbmParcela.Visible = false;
             CarregarClientes();
+            CarregarProdutos();
+        }
+        public void CarregarProdutos()
+        {
+            try
+            {
+                cn.Open();
+                string query = "select Nome from Produto";
+                using (SqlCommand cmd = new SqlCommand(query, cn.Connection))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            cbmProduto.Items.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar produtos: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
         public void CarregarClientes()
         {
@@ -134,14 +161,14 @@ namespace ProjetoPI
                             // Inserir na tabela Pedido_nota
                             string clienteID = ((KeyValuePair<int, string>)cbmClientes.SelectedItem).Key.ToString();
                             string insertPedidoNota = @"
-                        INSERT INTO Pedido_nota (Cod_ped, Cod_usu, Cod_cli, Data, Valor)
-                        VALUES (
-                            @CodPedido,
-                            @Vendedor,
-                            @ClienteId,
-                            GETDATE(),
-                            @Valor
-                        );";
+                                    INSERT INTO Pedido_nota (Cod_ped, Cod_usu, Cod_cli, Data, Valor)
+                                    VALUES (
+                                        @CodPedido,
+                                        @Vendedor,
+                                        @ClienteId,
+                                        GETDATE(),
+                                        @Valor
+                                    );";
 
                             using (SqlCommand cmd = new SqlCommand(insertPedidoNota, cn.Connection, transaction))
                             {
@@ -154,16 +181,16 @@ namespace ProjetoPI
 
                             // Inserir na tabela Pagamento
                             string insertPagamento = @"
-                        INSERT INTO Pagamento (Cod_pag, Cod_ped, Cod_usu, Tipo_pagamento, Data, Parcela, Valor)
-                        VALUES (
-                            @CodPag,
-                            @CodPedido,
-                            @Vendedor,
-                            @TipoPagamento,
-                            GETDATE(),
-                            @Parcela,
-                            @Valor
-                        )";
+                                    INSERT INTO Pagamento (Cod_pag, Cod_ped, Cod_usu, Tipo_pagamento, Data, Parcela, Valor)
+                                    VALUES (
+                                        @CodPag,
+                                        @CodPedido,
+                                        @Vendedor,
+                                        @TipoPagamento,
+                                        GETDATE(),
+                                        @Parcela,
+                                        @Valor
+                                    )";
                             using (SqlCommand cmd = new SqlCommand(insertPagamento, cn.Connection, transaction))
                             {
                                 cmd.Parameters.AddWithValue("@CodPag", codPag);
@@ -185,9 +212,9 @@ namespace ProjetoPI
 
                                     // Atualizar a quantidade no banco de dados
                                     string atualizarEstoqueQuery = @"
-                                UPDATE Produto
-                                SET Quantidade = Quantidade - @QuantidadeVendida
-                                WHERE Nome = @Produto AND Quantidade >= @QuantidadeVendida";
+                                            UPDATE Produto
+                                            SET Quantidade = Quantidade - @QuantidadeVendida
+                                            WHERE Nome = @Produto AND Quantidade >= @QuantidadeVendida";
 
                                     using (SqlCommand cmd = new SqlCommand(atualizarEstoqueQuery, cn.Connection, transaction))
                                     {
@@ -241,6 +268,40 @@ namespace ProjetoPI
             {
                 lblParcela.Visible = false;
                 cbmParcela.Visible = false;
+            }
+        }
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            if (cbmProduto.SelectedItem != null && txtQuantidade.Text != "")
+            {
+                string produto = cbmProduto.SelectedItem.ToString();
+                int quantidade = Convert.ToInt32(txtQuantidade.Text);
+                decimal precoUnitario = 0;
+                // Obter o preço unitário do produto
+                try
+                {
+                    cn.Open();
+                    string query = "SELECT preco FROM Produto WHERE Nome = @Produto";
+                    using (SqlCommand cmd = new SqlCommand(query, cn.Connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Produto", produto);
+                        precoUnitario = Convert.ToDecimal(cmd.ExecuteScalar());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao obter preço do produto: " + ex.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+                // Adicionar o produto ao DataGridView
+                dgvItens.Rows.Add(produto, quantidade, precoUnitario, quantidade * precoUnitario);
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto e insira a quantidade.");
             }
         }
     }
