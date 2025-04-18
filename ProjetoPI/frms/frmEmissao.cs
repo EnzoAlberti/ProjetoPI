@@ -26,24 +26,64 @@ namespace ProjetoPI
         }
         public void CarregarProdutos()
         {
+            DataTable produtosAtivos = new DataTable();
+            List<string> produtosParaInativar = new List<string>();
+
             try
             {
                 cn.Open();
-                string query = "select Nome from Produto";
+                string query = "SELECT nome, quantidade FROM Produto WHERE status = 'Ativo'";
                 using (SqlCommand cmd = new SqlCommand(query, cn.Connection))
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                 {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    adapter.Fill(produtosAtivos);
+                }
+
+                foreach (DataRow row in produtosAtivos.Rows)
+                {
+                    string nomeProduto = row["Nome"].ToString();
+                    int quantidadeEstoque = Convert.ToInt32(row["Quantidade"]);
+
+                    if (quantidadeEstoque > 0)
                     {
-                        while (reader.Read())
-                        {
-                            cbmProduto.Items.Add(reader.GetString(0));
-                        }
+                        cbmProduto.Items.Add(nomeProduto);
                     }
+                    else
+                    {
+                        produtosParaInativar.Add(nomeProduto);
+                    }
+                }
+
+                // Agora inative os produtos fora de estoque
+                foreach (string produto in produtosParaInativar)
+                {
+                    InativarProduto(produto);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar produtos: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public void InativarProduto(string nomeProduto)
+        {
+            try
+            {
+                cn.Open();
+                string updateQuery = "update Produto set status = 'Inativo' where nome = @NomeProduto";
+                using (SqlCommand cmd = new SqlCommand(updateQuery, cn.Connection))
+                {
+                    cmd.Parameters.AddWithValue("@NomeProduto", nomeProduto);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inativar produto: " + ex.Message);
             }
             finally
             {
@@ -233,12 +273,21 @@ namespace ProjetoPI
                             // Confirmar transação
                             transaction.Commit();
                             MessageBox.Show("Venda registrada com sucesso!");
+                            // Limpar os campos
+                            cbmProduto.Items.Clear();
+                            CarregarProdutos();
+                            dgvItens.Rows.Clear();
+                            txtQuantidade.Clear();
+                            cbmProduto.SelectedIndex = -1; // Desseleciona o produto
                         }
                         catch (Exception ex)
                         {
                             // Reverter transação em caso de erro
                             transaction.Rollback();
                             MessageBox.Show("Erro ao registrar a venda: " + ex.Message);
+                            // Recarrega o cmbProduto
+                            cbmProduto.Items.Clear();
+                            CarregarProdutos();
                         }
                     }
                 }

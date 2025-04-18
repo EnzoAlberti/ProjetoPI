@@ -72,6 +72,7 @@ namespace ProjetoPI
                     {
                         usuarioConectado = emailComboBox.Text;
                         SessaoUsuario.CodUsuLog = (int)reader["cod_usu"];
+                        LogSistema.ResgistrarLogin(usuarioConectado);
                         frmTelaPrincipal p = new frmTelaPrincipal();
                         this.Hide();
                         p.Show();
@@ -122,6 +123,7 @@ namespace ProjetoPI
                         {
                             usuarioConectado = emailComboBox.Text;
                             SessaoUsuario.CodUsuLog = (int)reader["cod_usu"];
+                            LogSistema.ResgistrarLogin(usuarioConectado);
                             frmTelaPrincipal p = new frmTelaPrincipal();
                             this.Hide();
                             p.Show();

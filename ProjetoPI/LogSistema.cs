@@ -42,10 +42,24 @@ namespace ProjetoPI
         {
             try
             {
+                // Verifica se o arquivo de log existe, e cria se não existir
+                if (!File.Exists(caminhoLog))
+                {
+                    try
+                    {
+                        File.Create(caminhoLog).Dispose(); // Cria o arquivo
+                        Console.WriteLine($"Arquivo de log criado em: {caminhoLog}");
+                    }
+                    catch (Exception exCriacao)
+                    {
+                        Console.WriteLine($"Erro ao criar arquivo de log: {exCriacao.Message}");
+                    }
+                }
+
                 File.AppendAllText(caminhoLog, mensagem + Environment.NewLine);
-                Console.WriteLine($"Caminho de log: {caminhoLog}");
+                Console.WriteLine($"Log salvo em: {caminhoLog}");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao salvar log: {ex.Message}");
             }
