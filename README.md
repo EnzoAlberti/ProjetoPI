@@ -14,5 +14,12 @@ O projeto é um software de vendas, com as funcionalidades de:
   - Produtos.
   - Vendas.
 
-###
-(Também inclui um sistema de logs)
+### Pesquisa no banco de dados
+
+  - Usuários.
+  - Clientes.
+  - Fornecedores.
+  - Produtos.
+  - Vendas.
+  
+(Também inclui um sistema de logs que monitora qual usuário realizou uma ação, e o horário da ação)
