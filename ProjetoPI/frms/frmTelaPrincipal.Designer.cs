@@ -59,8 +59,8 @@
             this.tsbUsuario = new System.Windows.Forms.ToolStripButton();
             this.tsbCliente = new System.Windows.Forms.ToolStripButton();
             this.tsbProduto = new System.Windows.Forms.ToolStripButton();
-            this.tsbSobre = new System.Windows.Forms.ToolStripButton();
             this.tsbEmissao = new System.Windows.Forms.ToolStripButton();
+            this.tsbSobre = new System.Windows.Forms.ToolStripButton();
             this.tsbLogoff = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsslUsuario = new System.Windows.Forms.ToolStripStatusLabel();
@@ -68,6 +68,7 @@
             this.tsslNomePC = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslData = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tsslAdm = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -319,16 +320,6 @@
             this.tsbProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbProduto.Click += new System.EventHandler(this.tsbProduto_Click);
             // 
-            // tsbSobre
-            // 
-            this.tsbSobre.Image = ((System.Drawing.Image)(resources.GetObject("tsbSobre.Image")));
-            this.tsbSobre.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSobre.Name = "tsbSobre";
-            this.tsbSobre.Size = new System.Drawing.Size(41, 35);
-            this.tsbSobre.Text = "Sobre";
-            this.tsbSobre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tsbSobre.Click += new System.EventHandler(this.tsbSobre_Click);
-            // 
             // tsbEmissao
             // 
             this.tsbEmissao.Image = ((System.Drawing.Image)(resources.GetObject("tsbEmissao.Image")));
@@ -338,6 +329,16 @@
             this.tsbEmissao.Text = "Emissao";
             this.tsbEmissao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbEmissao.Click += new System.EventHandler(this.tsbEmissao_Click);
+            // 
+            // tsbSobre
+            // 
+            this.tsbSobre.Image = ((System.Drawing.Image)(resources.GetObject("tsbSobre.Image")));
+            this.tsbSobre.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSobre.Name = "tsbSobre";
+            this.tsbSobre.Size = new System.Drawing.Size(41, 35);
+            this.tsbSobre.Text = "Sobre";
+            this.tsbSobre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbSobre.Click += new System.EventHandler(this.tsbSobre_Click);
             // 
             // tsbLogoff
             // 
@@ -355,7 +356,8 @@
             this.tsslUsuario,
             this.tsslIP,
             this.tsslNomePC,
-            this.tsslData});
+            this.tsslData,
+            this.tsslAdm});
             this.statusStrip1.Location = new System.Drawing.Point(0, 722);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1008, 24);
@@ -395,6 +397,12 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // tsslAdm
+            // 
+            this.tsslAdm.Name = "tsslAdm";
+            this.tsslAdm.Size = new System.Drawing.Size(118, 19);
+            this.tsslAdm.Text = "toolStripStatusLabel5";
             // 
             // frmTelaPrincipal
             // 
@@ -465,5 +473,6 @@
         private System.Windows.Forms.ToolStripMenuItem produtoToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem fornecedorToolStripMenuItem3;
         private System.Windows.Forms.ToolStripButton tsbEmissao;
+        private System.Windows.Forms.ToolStripStatusLabel tsslAdm;
     }
 }

@@ -17,6 +17,12 @@ namespace ProjetoPI
         public frmEditUsu()
         {
             InitializeComponent();
+            EsconderRemover();
+        }
+        public void EsconderRemover()
+        {
+            if (adm.isAdm != true)
+                bindingNavigatorDeleteItem.Enabled = false;
         }
 
         private void usuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -58,7 +64,7 @@ namespace ProjetoPI
                                   $"CEP: {cepTextBox.Text}, " +
                                   $"Bairro: {bairroTextBox.Text}, " +
                                   $"Status: {statusComboBox.Text}, ";
-                LogSistema.RegistrarAcao(frmLogin.SessaoUsuario.CodUsuLog.ToString(), "Edição de Usuário", detalhes);
+                LogSistema.RegistrarAcao(SessaoUsuario.CodUsuLog.ToString(), "Edição de Usuário", detalhes);
                 MessageBox.Show("Edição realizada com sucesso!");
             }
             catch (Exception ex)

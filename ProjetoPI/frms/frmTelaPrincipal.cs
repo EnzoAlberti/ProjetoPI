@@ -547,6 +547,7 @@ namespace ProjetoPI
             {
                 tsslIP.Text = "IP: " + myIP;
             }
+            tsslAdm.Text = "Administrador: " + adm.isAdm;
             ApplyBackgroundSettings();
         }
 

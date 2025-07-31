@@ -17,6 +17,12 @@ namespace ProjetoPI
         public frmEditFor()
         {
             InitializeComponent();
+            EsconderRemover();
+        }
+        public void EsconderRemover()
+        {
+            if (adm.isAdm != true)
+                bindingNavigatorDeleteItem.Enabled = false;
         }
 
         private void fornecedorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -61,7 +67,7 @@ namespace ProjetoPI
                                   $"CNPJ: {cnpjTextBox.Text}, " +
                                   $"Status: {statusComboBox.Text}, " +
                                   $"Email: {emailTextBox.Text}, ";
-                LogSistema.RegistrarAcao(frmLogin.SessaoUsuario.CodUsuLog.ToString(), "Edição de Fornecedor", detalhes);
+                LogSistema.RegistrarAcao(SessaoUsuario.CodUsuLog.ToString(), "Edição de Fornecedor", detalhes);
                 MessageBox.Show("Edição realizada com sucesso!");
             }
             catch (Exception ex)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -62,16 +63,26 @@ namespace ProjetoPI
             {
                 if ((emailComboBox.Text != "") && (senhaTextBox.Text != ""))
                 {
-                    SqlCommand comm = new SqlCommand("select * from Usuario where email = @usuario and " + "senha = @senha", conn);
-                    comm.Parameters.Add("@Usuario", SqlDbType.VarChar).Value = emailComboBox.Text;
+                    SqlCommand comm = new SqlCommand("select * from Usuario where email = @usuario and senha = @senha", conn);
+                    comm.Parameters.Add("@usuario", SqlDbType.VarChar).Value = emailComboBox.Text;
                     comm.Parameters.Add("@senha", SqlDbType.VarChar).Value = senhaTextBox.Text;
                     conn.Open();
-                    SqlDataReader reader = null;
-                    reader = comm.ExecuteReader();
+                    SqlDataReader reader = comm.ExecuteReader();
                     if (reader.Read())
                     {
                         usuarioConectado = emailComboBox.Text;
                         SessaoUsuario.CodUsuLog = (int)reader["cod_usu"];
+                        try
+                        {
+                            int nivel = Convert.ToInt32(reader["nivel"]);
+                            if(nivel == 1)adm.isAdm = true;
+                            else adm.isAdm = false;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Erro ao verificar nível de acesso: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            adm.isAdm = false; // Define como não usuario em caso de erro
+                        }
                         LogSistema.ResgistrarLogin(usuarioConectado);
                         frmTelaPrincipal p = new frmTelaPrincipal();
                         this.Hide();
@@ -87,7 +98,8 @@ namespace ProjetoPI
                 {
                     MessageBox.Show("Todos os campos são obrigatórios", "Aviso de segurança", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -100,10 +112,7 @@ namespace ProjetoPI
         {
             Application.Exit();
         }
-        public static class SessaoUsuario
-        {
-            public static int CodUsuLog { get; set; }
-        }
+        
         private void senhaTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -123,6 +132,17 @@ namespace ProjetoPI
                         {
                             usuarioConectado = emailComboBox.Text;
                             SessaoUsuario.CodUsuLog = (int)reader["cod_usu"];
+                            try
+                            {
+                                int nivel = Convert.ToInt32(reader["nivel"]);
+                                if (nivel == 1) adm.isAdm = true;
+                                else adm.isAdm = false;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Erro ao verificar nível de acesso: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                adm.isAdm = false; // Define como não usuario em caso de erro
+                            }
                             LogSistema.ResgistrarLogin(usuarioConectado);
                             frmTelaPrincipal p = new frmTelaPrincipal();
                             this.Hide();

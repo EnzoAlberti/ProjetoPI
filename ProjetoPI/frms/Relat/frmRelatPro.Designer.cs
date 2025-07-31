@@ -73,7 +73,7 @@
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRelatPro";
-            this.Text = "frmRelatPro";
+            this.Text = "Relatorio produto";
             this.Load += new System.EventHandler(this.frmRelatPro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();

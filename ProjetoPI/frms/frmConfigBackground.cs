@@ -31,6 +31,7 @@ namespace ProjetoPI
         }
         private void btnImagemFundo_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.BackgroundColor = Color.FromArgb(240, 240, 240);
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -39,8 +40,8 @@ namespace ProjetoPI
         }
         private void btnRestaurarPadrao_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.Reset();
-            ApplySettings();
+            Properties.Settings.Default.BackgroundImage = "";
+            Properties.Settings.Default.BackgroundColor = Color.FromArgb(240, 240, 240);
         }
         private void SaveSettings()
         {

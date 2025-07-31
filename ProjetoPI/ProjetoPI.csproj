@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adm.cs" />
     <Compile Include="Conection.cs" />
     <Compile Include="dbServicoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -214,6 +215,7 @@
     <Compile Include="LogSistema.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessaoUsuario.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frms\frmEmissao.resx">
       <DependentUpon>frmEmissao.cs</DependentUpon>

@@ -17,6 +17,12 @@ namespace ProjetoPI
         public frmCadFor()
         {
             InitializeComponent();
+            EsconderRemover();
+        }
+        public void EsconderRemover()
+        {
+            if(adm.isAdm != true)
+                bindingNavigatorDeleteItem.Enabled = false;
         }
 
         private void fornecedorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -129,7 +135,7 @@ namespace ProjetoPI
 
         private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
         {
-            cod_usuTextBox.Text = frmLogin.SessaoUsuario.CodUsuLog.ToString();
+            cod_usuTextBox.Text = SessaoUsuario.CodUsuLog.ToString();
         }
     }
 }

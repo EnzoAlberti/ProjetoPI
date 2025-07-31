@@ -467,7 +467,7 @@
             this.Controls.Add(this.fornecedorBindingNavigator);
             this.Name = "frmEditFor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGerFor";
+            this.Text = "Editor fornecedor";
             this.Load += new System.EventHandler(this.frmEditFor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedorBindingSource)).EndInit();

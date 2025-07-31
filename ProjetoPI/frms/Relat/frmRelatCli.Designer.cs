@@ -73,7 +73,7 @@
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRelatCli";
-            this.Text = "frmRelatCli";
+            this.Text = "Relatorio cliente";
             this.Load += new System.EventHandler(this.frmRelatCli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();

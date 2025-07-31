@@ -12,6 +12,12 @@ namespace ProjetoPI
         public frmGerCli()
         {
             InitializeComponent();
+            EsconderRemover();
+        }
+        public void EsconderRemover()
+        {
+            if (adm.isAdm != true)
+                bindingNavigatorDeleteItem.Enabled = false;
         }
 
         private void frmGerCli_Load(object sender, EventArgs e)
@@ -65,7 +71,7 @@ namespace ProjetoPI
                                   $"Status: {status_cliComboBox.Text}, " +
                                   $"Data de Nascimento: {data_nascDateTimePicker.Text}";
 
-                LogSistema.RegistrarAcao(frmLogin.SessaoUsuario.CodUsuLog.ToString(), "Edição de Cliente", detalhes);
+                LogSistema.RegistrarAcao(SessaoUsuario.CodUsuLog.ToString(), "Edição de Cliente", detalhes);
 
                 MessageBox.Show("Edição realizada com sucesso!");
             }

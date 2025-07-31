@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditPro));
             System.Windows.Forms.Label cod_proLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label tamanhoLabel;
@@ -40,21 +39,22 @@
             System.Windows.Forms.Label quantidadeLabel;
             System.Windows.Forms.Label statusLabel;
             System.Windows.Forms.Label tipoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditPro));
             this.dbServicoDataSet = new ProjetoPI.dbServicoDataSet();
             this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produtoTableAdapter = new ProjetoPI.dbServicoDataSetTableAdapters.ProdutoTableAdapter();
             this.tableAdapterManager = new ProjetoPI.dbServicoDataSetTableAdapters.TableAdapterManager();
             this.produtoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.produtoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cod_proTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
@@ -81,6 +81,96 @@
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingNavigator)).BeginInit();
             this.produtoBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // cod_proLabel
+            // 
+            cod_proLabel.AutoSize = true;
+            cod_proLabel.Location = new System.Drawing.Point(12, 40);
+            cod_proLabel.Name = "cod_proLabel";
+            cod_proLabel.Size = new System.Drawing.Size(43, 13);
+            cod_proLabel.TabIndex = 1;
+            cod_proLabel.Text = "Código:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(12, 66);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 3;
+            nomeLabel.Text = "Nome:";
+            // 
+            // tamanhoLabel
+            // 
+            tamanhoLabel.AutoSize = true;
+            tamanhoLabel.Location = new System.Drawing.Point(12, 92);
+            tamanhoLabel.Name = "tamanhoLabel";
+            tamanhoLabel.Size = new System.Drawing.Size(55, 13);
+            tamanhoLabel.TabIndex = 5;
+            tamanhoLabel.Text = "Tamanho:";
+            // 
+            // corLabel
+            // 
+            corLabel.AutoSize = true;
+            corLabel.Location = new System.Drawing.Point(12, 118);
+            corLabel.Name = "corLabel";
+            corLabel.Size = new System.Drawing.Size(26, 13);
+            corLabel.TabIndex = 7;
+            corLabel.Text = "Cor:";
+            // 
+            // precoLabel
+            // 
+            precoLabel.AutoSize = true;
+            precoLabel.Location = new System.Drawing.Point(12, 144);
+            precoLabel.Name = "precoLabel";
+            precoLabel.Size = new System.Drawing.Size(38, 13);
+            precoLabel.TabIndex = 9;
+            precoLabel.Text = "Preço:";
+            // 
+            // marcaLabel
+            // 
+            marcaLabel.AutoSize = true;
+            marcaLabel.Location = new System.Drawing.Point(12, 170);
+            marcaLabel.Name = "marcaLabel";
+            marcaLabel.Size = new System.Drawing.Size(40, 13);
+            marcaLabel.TabIndex = 11;
+            marcaLabel.Text = "Marca:";
+            // 
+            // cod_usuLabel
+            // 
+            cod_usuLabel.AutoSize = true;
+            cod_usuLabel.Location = new System.Drawing.Point(12, 275);
+            cod_usuLabel.Name = "cod_usuLabel";
+            cod_usuLabel.Size = new System.Drawing.Size(44, 13);
+            cod_usuLabel.TabIndex = 13;
+            cod_usuLabel.Text = "usuário:";
+            // 
+            // quantidadeLabel
+            // 
+            quantidadeLabel.AutoSize = true;
+            quantidadeLabel.Location = new System.Drawing.Point(12, 222);
+            quantidadeLabel.Name = "quantidadeLabel";
+            quantidadeLabel.Size = new System.Drawing.Size(65, 13);
+            quantidadeLabel.TabIndex = 15;
+            quantidadeLabel.Text = "Quantidade:";
+            // 
+            // statusLabel
+            // 
+            statusLabel.AutoSize = true;
+            statusLabel.Location = new System.Drawing.Point(12, 248);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new System.Drawing.Size(40, 13);
+            statusLabel.TabIndex = 17;
+            statusLabel.Text = "Status:";
+            // 
+            // tipoLabel
+            // 
+            tipoLabel.AutoSize = true;
+            tipoLabel.Location = new System.Drawing.Point(12, 196);
+            tipoLabel.Name = "tipoLabel";
+            tipoLabel.Size = new System.Drawing.Size(31, 13);
+            tipoLabel.TabIndex = 19;
+            tipoLabel.Text = "Tipo:";
             // 
             // dbServicoDataSet
             // 
@@ -136,6 +226,22 @@
             this.produtoBindingNavigator.TabIndex = 0;
             this.produtoBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -163,22 +269,14 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -201,17 +299,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
             // produtoBindingNavigatorSaveItem
             // 
@@ -222,15 +311,6 @@
             this.produtoBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.produtoBindingNavigatorSaveItem.Click += new System.EventHandler(this.produtoBindingNavigatorSaveItem_Click);
             // 
-            // cod_proLabel
-            // 
-            cod_proLabel.AutoSize = true;
-            cod_proLabel.Location = new System.Drawing.Point(12, 40);
-            cod_proLabel.Name = "cod_proLabel";
-            cod_proLabel.Size = new System.Drawing.Size(43, 13);
-            cod_proLabel.TabIndex = 1;
-            cod_proLabel.Text = "Código:";
-            // 
             // cod_proTextBox
             // 
             this.cod_proTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "cod_pro", true));
@@ -240,15 +320,6 @@
             this.cod_proTextBox.Size = new System.Drawing.Size(121, 20);
             this.cod_proTextBox.TabIndex = 2;
             // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(12, 66);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(38, 13);
-            nomeLabel.TabIndex = 3;
-            nomeLabel.Text = "Nome:";
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "nome", true));
@@ -256,15 +327,6 @@
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(121, 20);
             this.nomeTextBox.TabIndex = 4;
-            // 
-            // tamanhoLabel
-            // 
-            tamanhoLabel.AutoSize = true;
-            tamanhoLabel.Location = new System.Drawing.Point(12, 92);
-            tamanhoLabel.Name = "tamanhoLabel";
-            tamanhoLabel.Size = new System.Drawing.Size(55, 13);
-            tamanhoLabel.TabIndex = 5;
-            tamanhoLabel.Text = "Tamanho:";
             // 
             // tamanhoTextBox
             // 
@@ -274,15 +336,6 @@
             this.tamanhoTextBox.Size = new System.Drawing.Size(121, 20);
             this.tamanhoTextBox.TabIndex = 6;
             // 
-            // corLabel
-            // 
-            corLabel.AutoSize = true;
-            corLabel.Location = new System.Drawing.Point(12, 118);
-            corLabel.Name = "corLabel";
-            corLabel.Size = new System.Drawing.Size(26, 13);
-            corLabel.TabIndex = 7;
-            corLabel.Text = "Cor:";
-            // 
             // corTextBox
             // 
             this.corTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "cor", true));
@@ -290,15 +343,6 @@
             this.corTextBox.Name = "corTextBox";
             this.corTextBox.Size = new System.Drawing.Size(121, 20);
             this.corTextBox.TabIndex = 8;
-            // 
-            // precoLabel
-            // 
-            precoLabel.AutoSize = true;
-            precoLabel.Location = new System.Drawing.Point(12, 144);
-            precoLabel.Name = "precoLabel";
-            precoLabel.Size = new System.Drawing.Size(38, 13);
-            precoLabel.TabIndex = 9;
-            precoLabel.Text = "Preço:";
             // 
             // precoTextBox
             // 
@@ -308,15 +352,6 @@
             this.precoTextBox.Size = new System.Drawing.Size(121, 20);
             this.precoTextBox.TabIndex = 10;
             // 
-            // marcaLabel
-            // 
-            marcaLabel.AutoSize = true;
-            marcaLabel.Location = new System.Drawing.Point(12, 170);
-            marcaLabel.Name = "marcaLabel";
-            marcaLabel.Size = new System.Drawing.Size(40, 13);
-            marcaLabel.TabIndex = 11;
-            marcaLabel.Text = "Marca:";
-            // 
             // marcaTextBox
             // 
             this.marcaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "marca", true));
@@ -324,15 +359,6 @@
             this.marcaTextBox.Name = "marcaTextBox";
             this.marcaTextBox.Size = new System.Drawing.Size(121, 20);
             this.marcaTextBox.TabIndex = 12;
-            // 
-            // cod_usuLabel
-            // 
-            cod_usuLabel.AutoSize = true;
-            cod_usuLabel.Location = new System.Drawing.Point(12, 275);
-            cod_usuLabel.Name = "cod_usuLabel";
-            cod_usuLabel.Size = new System.Drawing.Size(44, 13);
-            cod_usuLabel.TabIndex = 13;
-            cod_usuLabel.Text = "usuário:";
             // 
             // cod_usuTextBox
             // 
@@ -343,15 +369,6 @@
             this.cod_usuTextBox.Size = new System.Drawing.Size(121, 20);
             this.cod_usuTextBox.TabIndex = 14;
             // 
-            // quantidadeLabel
-            // 
-            quantidadeLabel.AutoSize = true;
-            quantidadeLabel.Location = new System.Drawing.Point(12, 222);
-            quantidadeLabel.Name = "quantidadeLabel";
-            quantidadeLabel.Size = new System.Drawing.Size(65, 13);
-            quantidadeLabel.TabIndex = 15;
-            quantidadeLabel.Text = "Quantidade:";
-            // 
             // quantidadeTextBox
             // 
             this.quantidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "quantidade", true));
@@ -359,15 +376,6 @@
             this.quantidadeTextBox.Name = "quantidadeTextBox";
             this.quantidadeTextBox.Size = new System.Drawing.Size(121, 20);
             this.quantidadeTextBox.TabIndex = 16;
-            // 
-            // statusLabel
-            // 
-            statusLabel.AutoSize = true;
-            statusLabel.Location = new System.Drawing.Point(12, 248);
-            statusLabel.Name = "statusLabel";
-            statusLabel.Size = new System.Drawing.Size(40, 13);
-            statusLabel.TabIndex = 17;
-            statusLabel.Text = "Status:";
             // 
             // statusComboBox
             // 
@@ -380,15 +388,6 @@
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(121, 21);
             this.statusComboBox.TabIndex = 18;
-            // 
-            // tipoLabel
-            // 
-            tipoLabel.AutoSize = true;
-            tipoLabel.Location = new System.Drawing.Point(12, 196);
-            tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(31, 13);
-            tipoLabel.TabIndex = 19;
-            tipoLabel.Text = "Tipo:";
             // 
             // tipoTextBox
             // 
@@ -426,7 +425,7 @@
             this.Controls.Add(this.produtoBindingNavigator);
             this.Name = "frmEditPro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGerPro";
+            this.Text = "Editor produtos";
             this.Load += new System.EventHandler(this.frmEditPro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();

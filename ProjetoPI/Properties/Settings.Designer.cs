@@ -23,32 +23,17 @@ namespace ProjetoPI.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=dbServico.mssql.somee.com;Initial Catalog=dbServico;User ID=EnzoAlber" +
-            "ti_SQLLogin_1;Password=gjzydiz6zl;Encrypt=False")]
-        public string dbServicoConnectionString {
-            get {
-                return ((string)(this["dbServicoConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("White")]
-        public global::System.Drawing.Color BackgroundColor
-        {
-            get
-            {
+        public global::System.Drawing.Color BackgroundColor {
+            get {
                 return ((global::System.Drawing.Color)(this["BackgroundColor"]));
             }
-            set
-            {
+            set {
                 this["BackgroundColor"] = value;
             }
         }
-
+        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
@@ -58,6 +43,17 @@ namespace ProjetoPI.Properties {
             }
             set {
                 this["BackgroundImage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=dbServico.mssql.somee.com;Initial Catalog=dbServico;User ID=EnzoAlber" +
+            "ti_SQLLogin_1;Password=gjzydiz6zl;Encrypt=False;")]
+        public string dbServicoConnectionString {
+            get {
+                return ((string)(this["dbServicoConnectionString"]));
             }
         }
     }

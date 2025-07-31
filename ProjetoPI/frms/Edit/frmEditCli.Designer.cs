@@ -501,7 +501,7 @@
             this.Controls.Add(this.clienteBindingNavigator);
             this.Name = "frmGerCli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmGerCli";
+            this.Text = "Editor cliente";
             this.Load += new System.EventHandler(this.frmGerCli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbServicoDataSet)).EndInit();

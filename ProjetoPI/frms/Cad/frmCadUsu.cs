@@ -15,6 +15,19 @@ namespace ProjetoPI
     public partial class frmCadUsu: Form
     {
         Conection cn = new Conection();
+        public frmCadUsu()
+        {
+            InitializeComponent();
+            this.Width = 800;
+            this.Height = 600;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            EsconderRemover();
+        }
+        public void EsconderRemover()
+        {
+            if (adm.isAdm != true)
+                bindingNavigatorDeleteItem.Enabled = false;
+        }
         public void LimparCampo()
         {
             nomeTextBox.Text = "";
@@ -27,13 +40,6 @@ namespace ProjetoPI
             ufTextBox.Text = "";
             bairroTextBox.Text = "";
             telefoneTextBox.Text = "";
-        }
-        public frmCadUsu()
-        {
-            InitializeComponent();
-            this.Width = 800;
-            this.Height = 600;
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void usuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -151,7 +157,7 @@ namespace ProjetoPI
         }
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            cod_usuTextBox.Text = frmLogin.SessaoUsuario.CodUsuLog.ToString();
+            cod_usuTextBox.Text = SessaoUsuario.CodUsuLog.ToString();
         }
     }
 }

@@ -16,6 +16,12 @@ namespace ProjetoPI
         public frmEditPro()
         {
             InitializeComponent();
+            EsconderRemover();
+        }
+        public void EsconderRemover()
+        {
+            if (adm.isAdm != true)
+                bindingNavigatorDeleteItem.Enabled = false;
         }
 
         private void produtoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -54,7 +60,7 @@ namespace ProjetoPI
                                   $"Tipo: {tipoTextBox.Text}, " +
                                   $"Quantidade: {quantidadeTextBox.Text}, " +
                                   $"Status: {statusComboBox.Text} ";
-                LogSistema.RegistrarAcao(frmLogin.SessaoUsuario.CodUsuLog.ToString(), "Edição de Produto", detalhes);
+                LogSistema.RegistrarAcao(SessaoUsuario.CodUsuLog.ToString(), "Edição de Produto", detalhes);
                 MessageBox.Show("Edição realizada com sucesso!");
             }
             catch (Exception ex)

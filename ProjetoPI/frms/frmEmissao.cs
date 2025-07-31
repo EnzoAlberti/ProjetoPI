@@ -17,7 +17,7 @@ namespace ProjetoPI
         public frmEmissao()
         {
             InitializeComponent();
-            txtVendedor.Text = frmLogin.SessaoUsuario.CodUsuLog.ToString();
+            txtVendedor.Text = SessaoUsuario.CodUsuLog.ToString();
             txtVendedor.Enabled = false;
             lblParcela.Visible = false;
             cbmParcela.Visible = false;

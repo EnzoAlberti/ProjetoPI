@@ -49,7 +49,7 @@
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRelatExt";
-            this.Text = "frmRelatExt";
+            this.Text = "Relatorio extrato";
             this.Load += new System.EventHandler(this.frmRelatExt_Load);
             this.ResumeLayout(false);
 
